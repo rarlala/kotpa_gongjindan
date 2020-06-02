@@ -40,8 +40,8 @@ button:focus {
 
 .plus {
   background: url('../img/contents/plus_off.png') no-repeat;
-  width: 50px;
-  height: 50px;
+  width: 5rem;
+  height: 5rem;
   transition: transform 1s;
   cursor: pointer;
 }
@@ -74,7 +74,8 @@ button:focus {
 header {
   height: 85px;
   position: fixed;
-  right: 0;
+  top: 0;
+  right: -10px;
   z-index: 10;
   width: 67%;
   background: #efefef;
@@ -82,7 +83,7 @@ header {
 
 header .group {
   float: right;
-  padding: 3rem 3rem 0 0;
+  padding: 2rem 3rem 0 0;
 }
 
 header .group>a {
@@ -336,7 +337,7 @@ main {
 
 main .inner {
   width: 80%;
-  margin: 25rem auto 0;
+  margin: 270px auto 0;
 }
 
 /* contents */
@@ -346,8 +347,8 @@ main .inner {
 .contents-list li {
   text-align: center;
   position: relative;
-  width: 38rem;
-  height: 43rem;
+  width: 47%;
+  height: 42rem;
   background: #fff;
   display: inline-block;
   margin-bottom: 5rem;
@@ -357,47 +358,44 @@ main .inner {
   display: block;
 }
 
-.contents-list figure {
-  width: 38rem;
-}
-
 .contents-list figure img {
   width: 100%;
-  margin-top: -150px;
+  margin-top: -160px;
   display: block;
 }
 
 .contents-list li:nth-child(3) {
-  width: calc(75%);
+  width: 75%;
   margin-bottom: 5rem;
-  margin-left: 20rem;
+  margin-left: 25%;
   position: relative;
-  height: 33rem;
+  height: 30rem;
   text-align: left;
 }
 
 .contents-list li:nth-child(3) figure img {
   margin-top: 0;
   position: absolute;
-  margin-left: -20rem;
-  width: 50%;
+  top: 5px;
+  margin-left: -34%;
+  width: 290px;
 }
 
 .contents-list li:nth-child(3) p {
-  margin-left: 25rem;
+  margin-left: 35%;
 }
 
 .contents-list li:nth-child(3) .type {
-  padding-top: 5rem;
+  padding-top: 5%;
 }
 
 .contents-list li:nth-child(3) .plus {
-  margin-left: 24.5rem;
+  margin-left: 35%;
 }
 
 .contents-list li:nth-child(2),
 .contents-list li:nth-child(5) {
-  margin-left: 5rem;
+  margin-left: 5.6%;
 }
 
 .contents-list li:nth-child(4),
@@ -524,6 +522,7 @@ main .inner {
 .calendar .title-area {
   position: relative;
   margin-bottom: 3rem;
+  text-align: left;
 }
 
 .calendar .title-area .plus {
@@ -554,9 +553,14 @@ main .inner {
 
 .calendar-list li .title {
   font-size: 1.6rem;
+  width: 100%;
+  height: 2rem;
   color: #555;
   font-weight: bold;
   margin: 1rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .calendar-list li .time,
@@ -566,7 +570,7 @@ main .inner {
 }
 
 .calendar-list li+li {
-  margin-left: 3rem;
+  margin-left: 3%;
 }
 
 .calendar-list li:nth-child(4) {
