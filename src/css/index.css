@@ -508,6 +508,99 @@ main .inner {
 }
 
 
+/* calendar */
+
+.calendar {
+  margin-bottom: 5rem;
+  padding: 5rem 3rem 3rem;
+  background: #fff;
+  text-align: center;
+}
+
+.calendar .title-area {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.calendar .title-area .plus {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.calendar .title-area .plus:hover {
+  transform: rotate(540deg);
+  background: url('../img/contents/plus_on.png');
+}
+
+.calendar-list {
+  overflow: hidden;
+}
+
+.calendar-list li {
+  float: left;
+  width: 30%;
+  margin-bottom: 3rem;
+}
+
+.calendar-list li img {
+  width: 100%;
+}
+
+.calendar-list li .title {
+  font-size: 1.6rem;
+  color: #555;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.calendar-list li .time,
+.calendar-list li .area {
+  font-size: 1.3rem;
+  color: #797979;
+}
+
+.calendar-list li+li {
+  margin-left: 3rem;
+}
+
+.calendar-list li:nth-child(4) {
+  margin-left: 0;
+}
+
+.calendar .info {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #797979;
+  margin-bottom: 2rem;
+}
+
+.calendar .btn-apply {
+  position: relative;
+  box-sizing: border-box;
+  text-align: left;
+  padding-left: 8rem;
+  display: inline-block;
+  width: 30rem;
+  height: 6rem;
+  line-height: 6rem;
+  background: #edc06a;
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+.calendar .btn-apply::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 6.8rem;
+  transform: translateY(-50%);
+  background: url('../img/calendar/bu_btn.png') no-repeat center;
+  width: 41px;
+  height: 6px;
+  transition: all 1s;
+}
+
 
 /* media query PC*/
 

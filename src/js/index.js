@@ -101,4 +101,18 @@ $(document).ready(function() {
       var hover2Li = now2Li.split('_on')[0];
       $(this).stop().attr('src', hover2Li + '_off.png')
     })
+
+  // calendat img hover 시 이미지 변경 처리
+
+  $('.calendar-list a')
+    .on('mouseover', function() {
+      var nowLi = $(this).find('img').attr('src');
+      var hoverLi = nowLi.split('_off')[0];
+      $(this).find('img').stop().attr('src', hoverLi + '_on.jpg')
+    })
+    .on('mouseleave', function() {
+      var now2Li = $(this).find('img').attr('src');
+      var hover2Li = now2Li.split('_on')[0];
+      $(this).find('img').stop().attr('src', hover2Li + '_off.jpg')
+    })
 })
