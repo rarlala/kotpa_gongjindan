@@ -46,12 +46,15 @@ button:focus {
   cursor: pointer;
 }
 
+.hidden {
+  display: none;
+}
+
 /* visual */
 
 .visual {
   position: fixed;
   background: url('../img/visual/2006_main_visual1.gif') no-repeat top/cover;
-
   height: 100vh;
   z-index: 10;
 }
@@ -542,6 +545,7 @@ main .inner {
   float: left;
   width: 30%;
   margin-bottom: 3rem;
+  text-align: left;
 }
 
 .calendar-list li img {
@@ -675,8 +679,59 @@ main .inner {
   height: 6px;
 }
 
-.hidden {
-  display: none;
+/* footer */
+
+footer {
+  border-top: 1px solid #ccc;
+  padding-top: 3rem;
+  position: relative;
+}
+
+footer .logo a {
+  display: inline-block;
+  width: 200px;
+  height: 30px;
+  margin-bottom: 3rem;
+}
+
+footer .logo a img {
+  width: 100%;
+  display: block;
+}
+
+footer .top {
+  font-size: 1.5rem;
+  padding-right: 3rem;
+  position: absolute;
+  top: 3rem;
+  right: 0;
+  cursor: pointer;
+}
+
+footer .top img {
+  margin-left: 1rem;
+  position: absolute;
+  top: 2px;
+  right: 0;
+}
+
+footer p {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  display: inline-block;
+  color: #797979;
+}
+
+address {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  display: inline;
+  color: #797979;
+}
+
+.copyright {
+  display: block;
+  margin: 0.5rem 0 3rem;
 }
 
 /* media query PC*/
