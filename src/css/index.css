@@ -27,6 +27,24 @@ button:focus {
   outline: none;
 }
 
+.point-title {
+  color: #edc06a;
+  font-size: 1.6rem;
+}
+
+.content-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.plus {
+  background: url('../img/contents/plus_off.png') no-repeat;
+  width: 50px;
+  height: 50px;
+  transition: transform 1s;
+}
+
 /* visual */
 
 .visual {
@@ -313,7 +331,8 @@ main {
 }
 
 main .inner {
-  margin: 25rem 0 10rem 10rem;
+  width: 80%;
+  margin: 25rem auto 0;
 }
 
 /* contents */
@@ -323,8 +342,8 @@ main .inner {
 .contents-list li {
   text-align: center;
   position: relative;
-  width: 380px;
-  height: 430px;
+  width: 38rem;
+  height: 43rem;
   background: #fff;
   display: inline-block;
   margin-bottom: 5rem;
@@ -335,7 +354,7 @@ main .inner {
 }
 
 .contents-list figure {
-  width: 380px;
+  width: 38rem;
 }
 
 .contents-list figure img {
@@ -345,11 +364,11 @@ main .inner {
 }
 
 .contents-list li:nth-child(3) {
-  width: calc(67%);
+  width: calc(75%);
   margin-bottom: 5rem;
   margin-left: 20rem;
   position: relative;
-  height: 35rem;
+  height: 33rem;
   text-align: left;
 }
 
@@ -408,9 +427,6 @@ main .inner {
 }
 
 .contents-list li .plus {
-  background: url('../img/contents/plus_off.png') no-repeat;
-  width: 50px;
-  height: 50px;
   margin: 0 auto;
   transition: transform 1s;
 }
@@ -419,6 +435,79 @@ main .inner {
   transform: rotate(540deg);
   background: url('../img/contents/plus_on.png');
 }
+
+/* news 영역 */
+
+.news {
+  position: relative;
+  background: #fff;
+  overflow: hidden;
+  padding: 5rem 3rem;
+  margin-bottom: 5rem;
+}
+
+.news .title-area {
+  width: 20%;
+  float: left;
+}
+
+.news .plus {
+  position: absolute;
+  bottom: 3rem;
+  margin-top: 3rem;
+}
+
+.news .plus:hover {
+  transform: rotate(540deg);
+  background: url('../img/contents/plus_on.png');
+}
+
+.news-list {
+  overflow: hidden;
+  width: 80%;
+  float: right;
+}
+
+.news-list li {
+  float: left;
+  width: 33.3333%;
+  box-sizing: border-box;
+  padding-right: 1.5rem;
+}
+
+.news-list li+li {
+  padding-left: 1.5rem;
+  border-left: 1px solid #ccc;
+}
+
+.news-list li figure {
+  width: 100%;
+  height: 130px;
+  overflow: hidden;
+}
+
+.news-list li figure img {
+  width: 100%;
+  display: block;
+}
+
+.news-list li:hover .title {
+  color: #edc06a;
+}
+
+.news-list li .title {
+  margin: 2rem 0;
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: #555;
+}
+
+.news-list li .text {
+  font-size: 1.3rem;
+  color: #797979;
+}
+
+
 
 /* media query PC*/
 
