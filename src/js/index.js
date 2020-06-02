@@ -75,4 +75,17 @@ $(document).ready(function() {
       right: '-57%'
     })
   })
+
+  // contents img hover 시 이미지 변경 처리
+  $('main .contents img')
+    .on('mouseover', function() {
+      var nowLi = $(this).attr('src');
+      var hoverLi = nowLi.split('_off')[0];
+      $(this).stop().attr('src', hoverLi + '_on.png')
+    })
+    .on('mouseleave', function() {
+      var now2Li = $(this).attr('src');
+      var hover2Li = now2Li.split('_on')[0];
+      $(this).stop().attr('src', hover2Li + '_off.png')
+    })
 })

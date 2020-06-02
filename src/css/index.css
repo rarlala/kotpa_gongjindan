@@ -30,7 +30,7 @@ button:focus {
 /* visual */
 
 .visual {
-  position: relative;
+  position: fixed;
   background: url('../img/visual/2006_main_visual1.gif') no-repeat top/cover;
 
   height: 100vh;
@@ -51,7 +51,11 @@ button:focus {
 
 header {
   height: 85px;
-  position: relative;
+  position: fixed;
+  right: 0;
+  z-index: 10;
+  width: 67%;
+  background: #efefef;
 }
 
 header .group {
@@ -262,7 +266,7 @@ header .mnb li {
 
 header .mnb li .title {
   color: #fff;
-  font-size: 18px;
+  font-size: 1.8rem;
   margin-right: 1rem;
 }
 
@@ -299,6 +303,121 @@ header nav .btn-close-menu span {
 
 header nav .btn-close-menu span:last-child {
   transform: rotate(135deg);
+}
+
+/* main */
+
+main {
+  width: 67%;
+  float: right;
+}
+
+main .inner {
+  margin: 25rem 0 10rem 10rem;
+}
+
+/* contents */
+
+/* contents-list */
+
+.contents-list li {
+  text-align: center;
+  position: relative;
+  width: 380px;
+  height: 430px;
+  background: #fff;
+  display: inline-block;
+  margin-bottom: 5rem;
+}
+
+.contents-list li a {
+  display: block;
+}
+
+.contents-list figure {
+  width: 380px;
+}
+
+.contents-list figure img {
+  width: 100%;
+  margin-top: -150px;
+  display: block;
+}
+
+.contents-list li:nth-child(3) {
+  width: calc(67%);
+  margin-bottom: 5rem;
+  margin-left: 20rem;
+  position: relative;
+  height: 35rem;
+  text-align: left;
+}
+
+.contents-list li:nth-child(3) figure img {
+  margin-top: 0;
+  position: absolute;
+  margin-left: -20rem;
+  width: 50%;
+}
+
+.contents-list li:nth-child(3) p {
+  margin-left: 25rem;
+}
+
+.contents-list li:nth-child(3) .type {
+  padding-top: 5rem;
+}
+
+.contents-list li:nth-child(3) .plus {
+  margin-left: 24.5rem;
+}
+
+.contents-list li:nth-child(2),
+.contents-list li:nth-child(5) {
+  margin-left: 5rem;
+}
+
+.contents-list li:nth-child(4),
+.contents-list li:nth-child(5) {
+  margin-top: 15rem;
+}
+
+.contents-list .type {
+  font-size: 1.8rem;
+  color: #67b274;
+  letter-spacing: 2px;
+  margin-top: 1.5rem;
+}
+
+.contents-list .keyword {
+  font-size: 2.2rem;
+  color: #67b274;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+.contents-list .title {
+  font-size: 1.7rem;
+  margin: 2rem 0;
+  font-family: 'Nanum Myeongjo', serif;
+  letter-spacing: -1px;
+}
+
+.contents-list li:hover {
+  box-shadow: 3px 3px 15px #ccc;
+}
+
+.contents-list li .plus {
+  background: url('../img/contents/plus_off.png') no-repeat;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  transition: transform 1s;
+}
+
+.contents-list li:hover .plus {
+  transform: rotate(540deg);
+  background: url('../img/contents/plus_on.png');
 }
 
 /* media query PC*/
