@@ -102,7 +102,7 @@ $(document).ready(function() {
       $(this).stop().attr('src', hover2Li + '_off.png')
     })
 
-  // calendat img hover 시 이미지 변경 처리
+  // calendar img hover 시 이미지 변경 처리
 
   $('.calendar-list a')
     .on('mouseover', function() {
@@ -120,4 +120,31 @@ $(document).ready(function() {
   setInterval(function() {
     $('.banner li').fadeToggle('hidden')
   }, 3000)
+
+  // scroll top button
+
+  var $window = $(window),
+    $btnTop = $('.top');
+
+  $btnTop.on('click', function() {
+    $('html').animate({
+      scrollTop: 0
+    }, 500);
+  });
+
+  // scroll 특정 위치가 되면 visual 이미지 변경하기
+  $window.scroll(function() {
+    if ($window.scrollTop() > 1600) {
+      $('.visual').css({
+        background: `url('../src/img/visual/2006_main_visual2.jpg') no-repeat center/cover`
+      })
+    } else {
+      $('.visual').css({
+        background: `url('../src/img/visual/2006_main_visual1.gif') no-repeat center/cover`
+      })
+    };
+  });
+
+  $window.trigger('scroll');
+
 })
