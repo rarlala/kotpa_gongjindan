@@ -43,6 +43,7 @@ button:focus {
   width: 50px;
   height: 50px;
   transition: transform 1s;
+  cursor: pointer;
 }
 
 /* visual */
@@ -587,6 +588,8 @@ main .inner {
   background: #edc06a;
   color: #fff;
   font-size: 2.5rem;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .calendar .btn-apply::after {
@@ -598,9 +601,83 @@ main .inner {
   background: url('../img/calendar/bu_btn.png') no-repeat center;
   width: 41px;
   height: 6px;
-  transition: all 1s;
 }
 
+/* banner */
+
+.banner {
+  margin-bottom: 5rem;
+  overflow: hidden;
+}
+
+.banner .first-banner>a {
+  position: relative;
+  box-sizing: border-box;
+  padding: 2rem 3rem;
+  float: left;
+  background: #fff;
+  width: 50%;
+  background: url('../img/banner/banner_black.png') no-repeat center/cover;
+}
+
+.banner .first-banner>a .point-title {
+  color: #ffb3c4;
+  letter-spacing: 2px;
+}
+
+.banner ul {
+  float: right;
+  position: relative;
+  width: 50%;
+  background: pink;
+}
+
+.banner ul li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  padding: 2rem 3rem;
+  box-sizing: border-box;
+}
+
+.banner ul li:first-child {
+  background: url('../img/banner/banner_event2.png') no-repeat center/cover;
+}
+
+.banner ul li:nth-child(2) {
+  background: url('../img/banner/banner_event.png') no-repeat center/cover;
+}
+
+.banner .point-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.banner .content-title {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: normal;
+  padding: 1rem 0 2rem;
+}
+
+.banner .btn-more::after {
+  content: '';
+  position: absolute;
+  bottom: 1.5rem;
+  left: 3rem;
+  transform: translateY(-50%);
+  background: url('../img/calendar/bu_btn.png') no-repeat center;
+  width: 41px;
+  height: 6px;
+}
+
+.hidden {
+  display: none;
+}
 
 /* media query PC*/
 

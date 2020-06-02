@@ -115,4 +115,9 @@ $(document).ready(function() {
       var hover2Li = now2Li.split('_on')[0];
       $(this).find('img').stop().attr('src', hover2Li + '_off.jpg')
     })
+
+  // banner event 2개 3초마다 번갈아가며 출력
+  setInterval(function() {
+    $('.banner li').fadeToggle('hidden')
+  }, 3000)
 })
