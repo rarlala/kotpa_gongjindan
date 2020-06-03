@@ -474,8 +474,8 @@ main .inner {
   position: relative;
   background: #fff;
   overflow: hidden;
-  padding: 5rem 3rem;
-  margin-bottom: 5rem;
+  padding: 5em 3em;
+  margin-bottom: 5em;
 }
 
 .news .title-area {
@@ -486,8 +486,8 @@ main .inner {
 
 .news .plus {
   position: absolute;
-  bottom: 3rem;
-  margin-top: 3rem;
+  bottom: 3em;
+  margin-top: 3em;
 }
 
 .news .plus:hover {
@@ -503,41 +503,40 @@ main .inner {
 
 .news-list li {
   float: left;
-  width: 33.3333%;
+  width: 33%;
   box-sizing: border-box;
-  padding-right: 1.5rem;
+  padding-right: 1.5em;
 }
 
 .news-list li+li {
-  padding-left: 1.5rem;
+  padding-left: 1.5em;
   border-left: 1px solid #ccc;
 }
 
 .news-list li figure {
   width: 100%;
-  height: 130px;
+  height: 154px;
   overflow: hidden;
   position: relative;
 }
 
 .news-list li figure img {
-  width: 100%;
   display: block;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  max-width: 100%;
+  height: auto;
+}
+
+.news-list li .title {
+  margin: 1em 0;
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #555;
 }
 
 .news-list li:hover .title {
   color: #edc06a;
 }
 
-.news-list li .title {
-  margin: 2rem 0;
-  font-weight: bold;
-  font-size: 1.6rem;
-  color: #555;
-}
 
 .news-list li .text {
   font-size: 1.3rem;
@@ -840,8 +839,14 @@ address {
   }
 
   .news-list li figure {
-    height: 110px;
-    overflow: hidden;
+    position: relative;
+  }
+
+  .news-list li figure img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
   }
 
   /* calendar */
@@ -1072,7 +1077,7 @@ address {
   }
 
   .contents-list li:nth-child(3) p {
-    margin-left: 20%;
+    margin-left: 30%;
   }
 
   .contents-list li:nth-child(3) .type {
@@ -1080,11 +1085,11 @@ address {
   }
 
   .contents-list li:nth-child(3) .plus {
-    margin-left: 20%;
+    margin-left: 30%;
   }
 
   .news {
-    padding: 3rem 2rem;
+    padding: 3em 2em;
   }
 
   .news .title-area {
@@ -1106,6 +1111,7 @@ address {
 
   .news-list li+li {
     padding: 0;
+    border-left: none;
   }
 
   .news-list li figure {
