@@ -56,6 +56,7 @@ $(document).ready(function() {
   })
 
   // menu 닫기 버튼 클릭 시 메뉴 닫히도록 처리
+
   $('.btn-close-menu').on('click', function() {
     $('.dark-bg').stop().css({
       display: 'none'
@@ -77,43 +78,58 @@ $(document).ready(function() {
   })
 
   // contents img hover 시 이미지 변경 처리
-  $('main .contents img')
-    .on('mouseover', function() {
-      var nowLi = $(this).attr('src');
-      var hoverLi = nowLi.split('_off')[0];
-      $(this).stop().attr('src', hoverLi + '_on.png')
-    })
-    .on('mouseleave', function() {
-      var now2Li = $(this).attr('src');
-      var hover2Li = now2Li.split('_on')[0];
-      $(this).stop().attr('src', hover2Li + '_off.png')
-    })
 
-  //news img hover 시 이미지 변경 처리
-  $('.news-list img')
-    .on('mouseover', function() {
-      var nowLi = $(this).attr('src');
-      var hoverLi = nowLi.split('_off')[0];
-      $(this).stop().attr('src', hoverLi + '_on.png')
-    })
-    .on('mouseleave', function() {
-      var now2Li = $(this).attr('src');
-      var hover2Li = now2Li.split('_on')[0];
-      $(this).stop().attr('src', hover2Li + '_off.png')
-    })
-
-  // calendar img hover 시 이미지 변경 처리
-
-  $('.calendar-list a')
+  $('main .contents-list li')
     .on('mouseover', function() {
       var nowLi = $(this).find('img').attr('src');
       var hoverLi = nowLi.split('_off')[0];
-      $(this).find('img').stop().attr('src', hoverLi + '_on.jpg')
+      if (!hoverLi.match('_on.png')) {
+        $(this).find('img').stop().attr('src', hoverLi + '_on.png')
+      }
     })
     .on('mouseleave', function() {
       var now2Li = $(this).find('img').attr('src');
       var hover2Li = now2Li.split('_on')[0];
-      $(this).find('img').stop().attr('src', hover2Li + '_off.jpg')
+      if (!hover2Li.match('_off.png')) {
+        $(this).find('img').stop().attr('src', hover2Li + '_off.png')
+      }
+    })
+
+  //news img hover 시 이미지 변경 처리
+  $('.news-list li')
+    .on('mouseover', function() {
+      var nowLi = $(this).find('img').attr('src');
+      var hoverLi = nowLi.split('_off')[0];
+      if (!hoverLi.match('_on.png')) {
+        $(this).find('img').stop().attr('src', hoverLi + '_on.png')
+      }
+    })
+    .on('mouseleave', function() {
+      var now2Li = $(this).find('img').attr('src');
+      var hover2Li = now2Li.split('_on')[0];
+      if (!hover2Li.match('_off.png')) {
+        $(this).find('img').stop().attr('src', hover2Li + '_off.png')
+      }
+    })
+
+  // calendar img hover 시 이미지 변경 처리
+
+  $('.calendar-list li')
+    .on('mouseover', function() {
+      var nowLi = $(this).find('img').attr('src');
+      var hoverLi = nowLi.split('_off')[0];
+
+      if (!hoverLi.match('_on.jpg')) {
+        $(this).find('img').stop().attr('src', hoverLi + '_on.jpg')
+      }
+    })
+    .on('mouseleave', function() {
+      var now2Li = $(this).find('img').attr('src');
+      var hover2Li = now2Li.split('_on')[0];
+      if (!hover2Li.match('_off.jpg')) {
+        $(this).find('img').stop().attr('src', hover2Li + '_off.jpg')
+      }
+
     })
 
   // banner event 2개 3초마다 번갈아가며 출력
@@ -133,16 +149,30 @@ $(document).ready(function() {
   });
 
   // scroll 특정 위치가 되면 visual 이미지 변경하기
+
   $window.scroll(function() {
+
     if ($window.scrollTop() > 1600) {
-      $('.visual').css({
-        background: `url('../src/img/visual/2006_main_visual2.jpg') no-repeat center/cover`
-      })
+      var topVisualImage = $('.visual').css("background-image").replace(/url\("*|"*\)/g, "");
+
+      var bottomVisualImage = topVisualImage.split('1.gif')[0];
+
+      if (!bottomVisualImage.match('2.jpg')) {
+        $('.visual').css({
+          background: `url(${bottomVisualImage}2.jpg) no-repeat center/cover`
+        });
+      }
     } else {
-      $('.visual').css({
-        background: `url('../src/img/visual/2006_main_visual1.gif') no-repeat center/cover`
-      })
-    };
+      bottomVisualImage = $('.visual').css("background-image").replace(/url\("*|"*\)/g, "");
+
+      topVisualImage = bottomVisualImage.split('2.jpg')[0];
+
+      if (!topVisualImage.match('1.gif')) {
+        $('.visual').css({
+          background: `url(${topVisualImage}1.gif) no-repeat center/cover`
+        });
+      }
+    }
   });
 
   $window.trigger('scroll');
