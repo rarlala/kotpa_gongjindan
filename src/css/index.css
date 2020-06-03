@@ -40,7 +40,7 @@ button:focus {
 }
 
 .plus {
-  background: url('../img/contents/plus_off.png') no-repeat;
+  background: url('../img/contents/plus_off.png') no-repeat center/cover;
   width: 5rem;
   height: 5rem;
   transition: transform 1s;
@@ -583,6 +583,10 @@ main .inner {
 .calendar-list li .area {
   font-size: 1.3rem;
   color: #797979;
+  height: 2rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .calendar-list li+li {
@@ -754,7 +758,7 @@ address {
   margin: 0.5rem 0 3rem;
 }
 
-/* media query PC*/
+/* ------ media query 1201px 이상 ------*/
 
 @media screen and (min-width:1201px) {
   .visual {
@@ -768,7 +772,15 @@ address {
   }
 }
 
-@media screen and (min-width:961px) and (max-width: 1200px) {
+/* ------ media query  801px 이상, 1200px 이하 ------*/
+
+@media screen and (min-width:801px) and (max-width: 1200px) {
+
+  main .inner {
+    width: 90%;
+    margin: 270px auto 0;
+  }
+
   .point-title {
     color: #edc06a;
     font-size: 1.4rem;
@@ -791,7 +803,11 @@ address {
   }
 
   .contents-list li {
-    height: 35rem;
+    height: 36rem;
+  }
+
+  .contents-list figure img {
+    margin-top: -160px;
   }
 
   .contents-list li:nth-child(2),
@@ -801,6 +817,11 @@ address {
 
   .contents-list li:nth-child(3) figure img {
     width: 250px;
+  }
+
+  .contents-list li .plus {
+    width: 30px;
+    height: 30px;
   }
 
   /* news */
@@ -826,6 +847,7 @@ address {
 
   .news-list li figure {
     height: 110px;
+    overflow: hidden;
   }
 
   /* calendar */
@@ -880,4 +902,86 @@ address {
     right: 3.8rem;
     width: 32px;
   }
+}
+
+/* ------ media query  801px 이상, 1200px 이하 ------*/
+
+@media screen and (min-width:800px) and (max-width: 960px) {
+
+  .contents-list li {
+    height: 30rem;
+  }
+
+  .contents-list figure img {
+    margin-top: -120px;
+  }
+
+  .contents-list li:nth-child(3) {
+    height: 24rem;
+    margin-bottom: 2rem;
+  }
+
+  .contents-list li:nth-child(3) figure img {
+    width: 200px;
+  }
+
+  .contents-list li:nth-child(3) p {
+    margin-left: 30%;
+  }
+
+  .contents-list li:nth-child(3) .type {
+    padding-top: 5%;
+  }
+
+  .contents-list li:nth-child(3) .plus {
+    margin-left: 30%;
+  }
+
+  .contents-list .type {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+  }
+
+  .contents-list .keyword {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+
+  .contents-list .title {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+  }
+
+  .contents-list li .plus,
+  .plus {
+    width: 20px;
+    height: 20px;
+    margin-top: 20px;
+  }
+
+  .news .plus {
+    top: 10px;
+  }
+
+  .news-list li figure {
+    height: 100px;
+  }
+
+  .news-list li .title {
+    font-size: 1.25rem;
+  }
+
+  .news-list li .text {
+    font-size: 1.2rem;
+  }
+
+  .calendar .title-area .plus {
+    top: -10px;
+  }
+
+  .calendar .btn-apply::after {
+    right: 0;
+    width: 28px;
+  }
+
 }
