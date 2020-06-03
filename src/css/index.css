@@ -45,8 +45,8 @@ button:focus {
 
 .plus {
   background: url('../img/contents/plus_off.png') no-repeat center/cover;
-  width: 5rem;
-  height: 5rem;
+  width: 4em;
+  height: 4em;
   transition: transform 1s;
   cursor: pointer;
 }
@@ -59,25 +59,27 @@ button:focus {
 
 .visual-area {
   position: fixed;
+  float: left;
   width: 33%;
   min-height: 100vh;
   background: #67b274;
+  text-align: center;
 }
 
 .visual {
   width: 100%;
   height: 100vh;
   background: url('../img/visual/2006_main_visual1.gif') no-repeat top/contain;
-  /* z-index: 10; */
-  resize: both;
 }
 
 .visual .info {
   position: absolute;
-  padding: 0.25rem 3rem;
+  left: 0;
   bottom: 10px;
-  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
   font-size: 1.3rem;
+  padding: 0 3em;
   color: #fafafa;
   word-break: break-all;
 }
@@ -361,46 +363,52 @@ main .inner {
 
 /* contents */
 
-/* contents-list */
+.content {
+  width: 67%;
+  float: right;
+}
 
 .contents-list li {
-  text-align: center;
   position: relative;
-  width: 47%;
-  height: 42rem;
-  background: #fff;
-  display: inline-block;
-  margin-bottom: 5rem;
-  opacity: 0;
   top: 50px;
+  display: inline-block;
+  width: 47%;
+  margin-bottom: 5em;
+  background: #fff;
+  text-align: center;
+  opacity: 0;
 }
 
 .contents-list li a {
   display: block;
 }
 
+.contents-list li figure {
+  width: 100%;
+}
+
 .contents-list figure img {
+  display: block;
+  margin: 0 auto;
+  max-width: 385px;
   width: 100%;
   margin-top: -160px;
-  display: block;
 }
 
 .contents-list li:nth-child(3) {
-  width: 75%;
-  margin-bottom: 5rem;
-  margin-left: 25%;
   position: relative;
-  height: 30rem;
+  float: right;
+  width: 75%;
+  margin-bottom: 5em;
   text-align: left;
 }
 
 .contents-list li:nth-child(3) figure img {
-  margin-top: 0;
   position: absolute;
   top: 5px;
-  margin-left: -34%;
-  width: 290px;
   left: -50px;
+  margin: 0 0 0 -34%;
+  width: 29em;
 }
 
 .contents-list li:nth-child(3) p {
@@ -412,7 +420,7 @@ main .inner {
 }
 
 .contents-list li:nth-child(3) .plus {
-  margin-left: 35%;
+  margin: 40px 35%;
 }
 
 .contents-list li:nth-child(2),
@@ -422,28 +430,28 @@ main .inner {
 
 .contents-list li:nth-child(4),
 .contents-list li:nth-child(5) {
-  margin-top: 15rem;
+  margin-top: 15em;
 }
 
 .contents-list .type {
   font-size: 1.8rem;
   color: #67b274;
   letter-spacing: 2px;
-  margin-top: 1.5rem;
+  margin-top: 1.1em;
 }
 
 .contents-list .keyword {
   font-size: 2.2rem;
   color: #67b274;
   font-weight: bold;
-  margin-top: 2rem;
+  margin-top: 0.6em;
 }
 
 .contents-list .title {
   font-size: 1.7rem;
   margin: 2rem 0;
   font-family: 'Nanum Myeongjo', serif;
-  letter-spacing: -1px;
+  letter-spacing: -1.5px;
 }
 
 .contents-list li:hover {
@@ -451,13 +459,13 @@ main .inner {
 }
 
 .contents-list li .plus {
-  margin: 0 auto;
+  margin: 0 auto 30px;
   transition: transform 1s;
 }
 
 .contents-list li:hover .plus {
   transform: rotate(540deg);
-  background: url('../img/contents/plus_on.png');
+  background: url('../img/contents/plus_on.png') no-repeat center/cover;
 }
 
 /* news 영역 */
@@ -769,23 +777,13 @@ address {
   margin: 0.5rem 0 3rem;
 }
 
-/* ------ media query 1201px 이상 ------*/
+/* ------ media query 1701px 이상 ------*/
 
-@media screen and (min-width:1201px) {
-  .visual {
-    float: left;
-    background-size: cover;
-  }
-
-  .content {
-    width: 67%;
-    float: right;
-  }
-}
+@media screen and (min-width:1701px) {}
 
 /* ------ media query  801px 이상, 1200px 이하 ------*/
 
-@media screen and (min-width:801px) and (max-width: 1200px) {
+@media screen and (min-width:801px) and (max-width: 1700px) {
 
   main .inner {
     width: 90%;
@@ -793,28 +791,14 @@ address {
   }
 
   .point-title {
-    color: #edc06a;
     font-size: 1.4rem;
   }
 
   .content-title {
     font-size: 2.2rem;
     font-weight: bold;
-    color: #555;
   }
 
-  .visual {
-    float: left;
-  }
-
-  .content {
-    width: 67%;
-    float: right;
-  }
-
-  .contents-list li {
-    height: 36rem;
-  }
 
   .contents-list figure img {
     margin-top: -160px;
@@ -837,12 +821,12 @@ address {
   /* news */
 
   .news {
-    padding: 3rem;
+    padding: 3em;
   }
 
   .news .plus {
     top: 0;
-    right: 3rem;
+    right: 3em;
   }
 
   .news-list {
@@ -852,7 +836,7 @@ address {
   .news .title-area {
     float: none;
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 1em;
   }
 
   .news-list li figure {
@@ -901,7 +885,6 @@ address {
     bottom: 0.5rem;
     left: 2rem;
     width: 36px;
-
   }
 
 }
@@ -919,7 +902,7 @@ address {
 @media screen and (min-width:800px) and (max-width: 960px) {
 
   .contents-list li {
-    height: 30rem;
+    margin-bottom: 3em;
   }
 
   .contents-list figure img {
@@ -927,8 +910,7 @@ address {
   }
 
   .contents-list li:nth-child(3) {
-    height: 24rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1em;
   }
 
   .contents-list li:nth-child(3) figure img {
@@ -949,17 +931,17 @@ address {
 
   .contents-list .type {
     font-size: 1.2rem;
-    margin-top: 1.5rem;
+    margin-top: 1.1em;
   }
 
   .contents-list .keyword {
     font-size: 2rem;
-    margin-top: 1rem;
+    margin-top: 0.5em;
   }
 
   .contents-list .title {
     font-size: 1.8rem;
-    margin: 1rem 0;
+    margin: 0.6em 0;
   }
 
   .contents-list li .plus,
@@ -1001,14 +983,11 @@ address {
 @media screen and (min-width:681px) and (max-width: 800px) {
 
   .point-title {
-    color: #edc06a;
     font-size: 1.2rem;
   }
 
   .content-title {
     font-size: 2.0rem;
-    font-weight: bold;
-    color: #555;
   }
 
   .visual-area {
@@ -1018,16 +997,9 @@ address {
   }
 
   .visual {
-    width: 100%;
-    background-size: contain;
     min-height: 160vw;
   }
 
-  .visual .info {
-    padding-left: 12.5%;
-    background-size: contain;
-    height: auto;
-  }
 
   header {
     background: transparent;
@@ -1113,7 +1085,6 @@ address {
 
   .news {
     padding: 3rem 2rem;
-
   }
 
   .news .title-area {
