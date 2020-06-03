@@ -51,6 +51,11 @@ button:focus {
   cursor: pointer;
 }
 
+.plus:hover {
+  transform: rotate(540deg);
+  background: url('../img/contents/plus_on.png') no-repeat center/cover;
+}
+
 .hidden {
   display: none;
 }
@@ -61,7 +66,7 @@ button:focus {
   position: fixed;
   float: left;
   width: 33%;
-  min-height: 100vh;
+  height: 100vh;
   background: #67b274;
   text-align: center;
 }
@@ -490,11 +495,6 @@ main .inner {
   margin-top: 3em;
 }
 
-.news .plus:hover {
-  transform: rotate(540deg);
-  background: url('../img/contents/plus_on.png');
-}
-
 .news-list {
   overflow: hidden;
   width: 80%;
@@ -547,8 +547,8 @@ main .inner {
 /* calendar */
 
 .calendar {
-  margin-bottom: 5rem;
-  padding: 5rem 3rem 3rem;
+  margin-bottom: 5em;
+  padding: 5em 3em 3em;
   background: #fff;
   text-align: center;
 }
@@ -565,11 +565,6 @@ main .inner {
   right: 0;
 }
 
-.calendar .title-area .plus:hover {
-  transform: rotate(540deg);
-  background: url('../img/contents/plus_on.png');
-}
-
 .calendar-list {
   overflow: hidden;
 }
@@ -577,7 +572,7 @@ main .inner {
 .calendar-list li {
   float: left;
   width: 30%;
-  margin-bottom: 3rem;
+  margin-bottom: 3em;
   text-align: left;
 }
 
@@ -588,10 +583,10 @@ main .inner {
 .calendar-list li .title {
   font-size: 1.6rem;
   width: 100%;
-  height: 2rem;
+  height: 2em;
   color: #555;
   font-weight: bold;
-  margin: 1rem 0;
+  margin: 1em 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -601,7 +596,7 @@ main .inner {
 .calendar-list li .area {
   font-size: 1.3rem;
   color: #797979;
-  height: 2rem;
+  height: 1.5em;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -624,16 +619,16 @@ main .inner {
 
 .calendar .btn-apply {
   position: relative;
-  box-sizing: border-box;
-  text-align: left;
-  padding-left: 8rem;
   display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 2rem;
   width: 40%;
+  min-width: 15em;
   height: 5%;
-  line-height: 6rem;
+  line-height: 3em;
   background: #edc06a;
   color: #fff;
-  font-size: 2.5rem;
   font-weight: 500;
   cursor: pointer;
 }
@@ -642,8 +637,7 @@ main .inner {
   content: '';
   position: absolute;
   top: 50%;
-  right: 18%;
-  transform: translate(-50%, -50%);
+  transform: translate(30%, -50%);
   background: url('../img/calendar/bu_btn.png') no-repeat right/cover;
   width: 41px;
   height: 6px;
@@ -659,7 +653,7 @@ main .inner {
 .banner .first-banner>a {
   position: relative;
   box-sizing: border-box;
-  padding: 2rem 3rem;
+  padding: 2em 3em;
   float: left;
   background: #fff;
   width: 50%;
@@ -675,7 +669,6 @@ main .inner {
   float: right;
   position: relative;
   width: 50%;
-  background: pink;
 }
 
 .banner ul li {
@@ -684,7 +677,7 @@ main .inner {
   left: 0;
   width: 100%;
   background: #fff;
-  padding: 2rem 3rem;
+  padding: 2em 3em;
   box-sizing: border-box;
 }
 
@@ -707,7 +700,7 @@ main .inner {
   font-size: 2rem;
   color: #fff;
   font-weight: normal;
-  padding: 1rem 0 2rem;
+  padding: 1em 0 2em;
 }
 
 .banner .btn-more::after {
@@ -860,15 +853,9 @@ address {
   }
 
   .calendar .btn-apply {
-    padding-left: 5rem;
     font-size: 1.8rem;
-    height: 4rem;
-    line-height: 4rem;
-  }
-
-  .calendar .btn-apply::after {
-    right: 0%;
-    width: 32px;
+    height: 3em;
+    line-height: 3em;
   }
 
   /* banner */
@@ -892,14 +879,6 @@ address {
     width: 36px;
   }
 
-}
-
-/* calendar 내 공연 등록 버튼 때문에 추가 */
-@media screen and (min-width:1100px) and (max-width: 1200px) {
-  .calendar .btn-apply::after {
-    right: 3.8rem;
-    width: 32px;
-  }
 }
 
 /* ------ media query  801px 이상, 1200px 이하 ------*/
@@ -976,35 +955,25 @@ address {
     top: -10px;
   }
 
-  .calendar .btn-apply::after {
-    right: 0;
-    width: 28px;
-  }
-
 }
 
-/* ------ media query  681px 이상 800px 이하 ------*/
+/* ------ media query 800px 이하 ------*/
 
-@media screen and (min-width:681px) and (max-width: 800px) {
+@media screen and (max-width: 800px) {
 
   .point-title {
     font-size: 1.2rem;
   }
 
   .content-title {
-    font-size: 2.0rem;
+    font-size: 2rem;
   }
 
   .visual-area {
     position: relative;
     width: 100%;
-    height: auto;
+    height: 160vw;
   }
-
-  .visual {
-    min-height: 160vw;
-  }
-
 
   header {
     background: transparent;
@@ -1088,6 +1057,19 @@ address {
     margin-left: 30%;
   }
 
+  .contents-list .type {
+    font-size: 1.2rem;
+  }
+
+  .contents-list .keyword {
+    font-size: 1.8rem;
+    margin-top: 0;
+  }
+
+  .contents-list .title {
+    font-size: 1.5rem;
+  }
+
   .news {
     padding: 3em 2em;
   }
@@ -1095,6 +1077,7 @@ address {
   .news .title-area {
     width: 100%;
     float: none;
+    margin-bottom: 15px;
   }
 
   .news-list {
@@ -1138,7 +1121,87 @@ address {
     margin-top: 20px;
   }
 
+  .calendar {
+    padding: 3em;
+  }
+
   footer {
     text-align: center;
+  }
+}
+
+/* ------ media query  680px 이하 ------*/
+
+@media screen and (max-width: 680px) {
+
+  header {
+    right: 0;
+  }
+
+  header nav {
+    right: -100%;
+    width: 100%;
+  }
+
+  .contents-list li:nth-child(2),
+  .contents-list li:nth-child(5) {
+    margin-left: 4%;
+  }
+
+  .contents-list li:nth-child(3) figure img {
+    width: 200px;
+  }
+
+  .news-list li {
+    height: auto;
+    margin-bottom: 2em;
+  }
+
+  .news-list li figure {
+    height: auto;
+  }
+
+  .news-list li .title {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .calendar-list li {
+    width: 48%;
+  }
+
+  .calendar-list li:nth-child(4) {
+    margin-left: 3%;
+  }
+
+  .calendar-list li:nth-child(3),
+  .calendar-list li:nth-child(5) {
+    margin-left: 0;
+  }
+
+  .banner {
+    height: 250px;
+  }
+
+  .banner .first-banner>a {
+    display: block;
+    float: none;
+    width: 100%;
+    height: auto;
+  }
+
+  .banner ul {
+    height: 140px;
+    float: none;
+    width: 100%;
+  }
+
+  .banner .point-title {
+    font-size: 1.2rem;
+  }
+
+  .banner .content-title {
+    font-size: 1.6rem;
+    padding: 0.5em 0;
   }
 }

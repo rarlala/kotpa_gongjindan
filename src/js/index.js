@@ -3,18 +3,42 @@ $(document).ready(function () {
 
   $('.btn-follow')
     .on('mouseover', function () {
-      $('.follow-list').slideDown();
+      if ($(window).width() > 783) {
+        $('.follow-list').slideDown();
+      } else {
+        $(this).css({
+          color: 'gray',
+        });
+      }
     })
     .on('mouseleave', function () {
-      $('.follow-list').slideUp();
+      if ($(window).width() > 783) {
+        $('.follow-list').slideUp();
+      } else {
+        $(this).css({
+          color: 'black',
+        });
+      }
     });
 
   $('.btn-sns')
     .on('mouseover', function () {
-      $('.sns-list').slideDown();
+      if ($(window).width() > 783) {
+        $('.sns-list').slideDown();
+      } else {
+        $(this).css({
+          color: 'gray',
+        });
+      }
     })
     .on('mouseleave', function () {
-      $('.sns-list').slideUp();
+      if ($(window).width() > 783) {
+        $('.sns-list').slideUp();
+      } else {
+        $(this).css({
+          color: 'black',
+        });
+      }
     });
 
   // header follow, sns 내부 ul 내 li 아이콘 색상 hover 시 변경 처리
@@ -69,7 +93,7 @@ $(document).ready(function () {
       display: 'none',
     });
     $('nav').stop().animate({
-      right: '-57%',
+      right: '-100%',
     });
     $('body').removeClass('not_scroll');
   });
@@ -80,7 +104,7 @@ $(document).ready(function () {
       display: 'none',
     });
     $('nav').stop().animate({
-      right: '-57%',
+      right: '-100%',
     });
     $('body').removeClass('not_scroll');
   });
