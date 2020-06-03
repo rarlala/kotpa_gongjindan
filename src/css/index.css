@@ -69,6 +69,12 @@ button:focus {
   word-break: break-all;
 }
 
+/* body scroll 막는 코드 */
+.not_scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
 /* header */
 
 header {
@@ -352,6 +358,8 @@ main .inner {
   background: #fff;
   display: inline-block;
   margin-bottom: 5rem;
+  opacity: 0;
+  top: 50px;
 }
 
 .contents-list li a {
@@ -379,6 +387,7 @@ main .inner {
   top: 5px;
   margin-left: -34%;
   width: 290px;
+  left: -50px;
 }
 
 .contents-list li:nth-child(3) p {

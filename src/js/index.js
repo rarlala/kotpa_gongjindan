@@ -53,6 +53,7 @@ $(document).ready(function() {
     $('nav').stop().animate({
       right: '0'
     })
+    $('body').addClass('not_scroll');
   })
 
   // menu 닫기 버튼 클릭 시 메뉴 닫히도록 처리
@@ -64,6 +65,7 @@ $(document).ready(function() {
     $('nav').stop().animate({
       right: '-57%'
     })
+    $('body').removeClass('not_scroll');
   })
 
 
@@ -75,6 +77,7 @@ $(document).ready(function() {
     $('nav').stop().animate({
       right: '-57%'
     })
+    $('body').removeClass('not_scroll');
   })
 
   // contents img hover 시 이미지 변경 처리
@@ -148,10 +151,44 @@ $(document).ready(function() {
     }, 500);
   });
 
-  // scroll 특정 위치가 되면 visual 이미지 변경하기
 
   $window.scroll(function() {
 
+    // 스크롤에 따른 이미지 등장 fade-up 애니메이션 처리
+    if ($window.scrollTop() < 100) {
+      $('.contents-list li:nth-child(1)').animate({
+        opacity: '1',
+        top: '0'
+      }, 1000)
+      $('.contents-list li:nth-child(2)').delay(500).animate({
+        opacity: '1',
+        top: '0'
+      }, 1000)
+    }
+
+    if ($window.scrollTop() > 200) {
+      $('.contents-list li:nth-child(3)').animate({
+        opacity: '1',
+        top: '0'
+      }, 1000)
+      $('.contents-list li:nth-child(3) img').animate({
+        opacity: '1',
+        left: '0'
+      }, 1000)
+    }
+
+    if ($window.scrollTop() > 600) {
+      $('.contents-list li:nth-child(4)').animate({
+        opacity: '1',
+        top: '0'
+      }, 1000)
+      $('.contents-list li:nth-child(5)').delay(500).animate({
+        opacity: '1',
+        top: '0'
+      }, 1000)
+    }
+
+    // scroll 특정 위치가 되면 visual 이미지 변경하기
     if ($window.scrollTop() > 1600) {
       var topVisualImage = $('.visual').css("background-image").replace(/url\("*|"*\)/g, "");
 
