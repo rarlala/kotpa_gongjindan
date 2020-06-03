@@ -30,6 +30,7 @@ button:focus {
 .point-title {
   color: #edc06a;
   font-size: 1.6rem;
+  letter-spacing: 2px;
 }
 
 .content-title {
@@ -54,6 +55,7 @@ button:focus {
 
 .visual {
   position: fixed;
+  width: 100%;
   background: url('../img/visual/2006_main_visual1.gif') no-repeat top/cover;
   height: 100vh;
   z-index: 10;
@@ -460,6 +462,7 @@ main .inner {
 .news .title-area {
   width: 20%;
   float: left;
+  word-break: keep-all;
 }
 
 .news .plus {
@@ -495,11 +498,15 @@ main .inner {
   width: 100%;
   height: 130px;
   overflow: hidden;
+  position: relative;
 }
 
 .news-list li figure img {
   width: 100%;
   display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .news-list li:hover .title {
@@ -599,8 +606,8 @@ main .inner {
   text-align: left;
   padding-left: 8rem;
   display: inline-block;
-  width: 30rem;
-  height: 6rem;
+  width: 40%;
+  height: 5%;
   line-height: 6rem;
   background: #edc06a;
   color: #fff;
@@ -613,9 +620,9 @@ main .inner {
   content: '';
   position: absolute;
   top: 50%;
-  right: 6.8rem;
-  transform: translateY(-50%);
-  background: url('../img/calendar/bu_btn.png') no-repeat center;
+  right: 18%;
+  transform: translate(-50%, -50%);
+  background: url('../img/calendar/bu_btn.png') no-repeat right/cover;
   width: 41px;
   height: 6px;
 }
@@ -687,7 +694,7 @@ main .inner {
   bottom: 1.5rem;
   left: 3rem;
   transform: translateY(-50%);
-  background: url('../img/calendar/bu_btn.png') no-repeat center;
+  background: url('../img/calendar/bu_btn.png') no-repeat center/cover;
   width: 41px;
   height: 6px;
 }
@@ -758,5 +765,119 @@ address {
   .content {
     width: 67%;
     float: right;
+  }
+}
+
+@media screen and (min-width:961px) and (max-width: 1200px) {
+  .point-title {
+    color: #edc06a;
+    font-size: 1.4rem;
+  }
+
+  .content-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #555;
+  }
+
+  .visual {
+    width: 33%;
+    float: left;
+  }
+
+  .content {
+    width: 67%;
+    float: right;
+  }
+
+  .contents-list li {
+    height: 35rem;
+  }
+
+  .contents-list li:nth-child(2),
+  .contents-list li:nth-child(5) {
+    margin-left: 5%;
+  }
+
+  .contents-list li:nth-child(3) figure img {
+    width: 250px;
+  }
+
+  /* news */
+
+  .news {
+    padding: 3rem;
+  }
+
+  .news .plus {
+    top: 0;
+    right: 3rem;
+  }
+
+  .news-list {
+    width: 100%;
+  }
+
+  .news .title-area {
+    float: none;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .news-list li figure {
+    height: 110px;
+  }
+
+  /* calendar */
+
+  .calendar {
+    padding: 3rem;
+  }
+
+  .calendar-list li+li {
+    margin-left: 5%;
+  }
+
+  .calendar .btn-apply {
+    padding-left: 5rem;
+    font-size: 1.8rem;
+    height: 4rem;
+    line-height: 4rem;
+  }
+
+  .calendar .btn-apply::after {
+    right: 0%;
+    width: 32px;
+  }
+
+  /* banner */
+
+  .banner .first-banner>a,
+  .banner ul li {
+    padding: 0.5rem 2rem;
+  }
+
+  .banner .point-title {
+    font-size: 1.4rem;
+  }
+
+  .banner .content-title {
+    font-size: 1.6rem;
+  }
+
+  .banner .btn-more::after {
+    bottom: 0.5rem;
+    left: 2rem;
+    width: 36px;
+
+  }
+
+}
+
+/* calendar 내 공연 등록 버튼 때문에 추가 */
+@media screen and (min-width:1100px) and (max-width: 1200px) {
+  .calendar .btn-apply::after {
+    right: 3.8rem;
+    width: 32px;
   }
 }

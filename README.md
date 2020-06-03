@@ -7,7 +7,7 @@
 - break-point
   - [x] 800px 이하
   - [x] 960px 이하
-  - [x] 1200px 이하
+  - [o] 1200px 이하
   - [o] 1201px 이상
 
 ### WAI-ARIA 처리
