@@ -98,260 +98,16 @@ button:focus {
 /* header */
 
 header {
-  height: 85px;
   position: fixed;
   top: 0;
   right: -10px;
-  z-index: 10;
   width: 67%;
+  height: 85px;
   background: #efefef;
 }
 
 header .group {
-  float: right;
   padding: 2rem 3rem 0 0;
-}
-
-header .group>a {
-  position: relative;
-  font-size: 1.5rem;
-  border-bottom: 4px solid #000;
-  padding: 5px 0;
-  margin: 1rem;
-  font-weight: bold;
-  top: -10px;
-}
-
-header .group>a:nth-child(4) {
-  top: 0;
-  padding: 0;
-  margin-bottom: 0;
-}
-
-header .group>a i {
-  font-size: 1.8rem;
-}
-
-header .group .active {
-  color: #ef84a7;
-  border-bottom-color: #ef84a7;
-}
-
-header .btn-follow,
-header .btn-sns {
-  padding-left: 0;
-  transition: all 0.5s;
-}
-
-header .btn-follow:hover,
-header .btn-sns:hover {
-  border-bottom-color: transparent;
-  color: transparent;
-}
-
-header .btn-follow .follow-list,
-header .btn-sns .sns-list {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 90px;
-  height: auto;
-  background: rgba(255, 255, 255, 0.5);
-  display: none;
-}
-
-header .btn-sns .sns-list {
-  width: 60px;
-  background: rgba(255, 255, 255, 0.5);
-}
-
-header .btn-follow .follow-list ul,
-header .btn-sns .sns-list ul {
-  border-top: 4px solid #ef84a7;
-  overflow: hidden;
-}
-
-header .btn-follow .follow-list ul li,
-header .btn-sns .sns-list ul li {
-  float: left;
-  width: 50%;
-  text-align: center;
-}
-
-header .group .btn-menu {
-  display: inline-block;
-  width: 32px;
-  height: 25px;
-  position: relative;
-  border-bottom: none;
-  margin-left: 2rem;
-  cursor: pointer;
-}
-
-header .group .btn-menu span {
-  position: absolute;
-  top: 55%;
-  right: 0;
-  transform: translateY(-50%);
-  width: 32px;
-  height: 5px;
-  background: #000;
-}
-
-header .group .btn-menu span:first-child {
-  top: 10%;
-}
-
-header .group .btn-menu span:last-child {
-  top: 100%;
-}
-
-header .group .btn-menu:hover span {
-  background: gray;
-}
-
-header .dark-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 20;
-  display: none;
-  cursor: pointer;
-}
-
-/* header - nav */
-
-header nav {
-  position: absolute;
-  top: 0;
-  right: -57%;
-  width: 57%;
-  height: 100vh;
-  background: #67b274;
-  overflow-y: scroll;
-  box-sizing: border-box;
-  padding: 5rem;
-  font-size: 1.5rem;
-  z-index: 30;
-}
-
-header nav .btn-close-menu {
-  position: absolute;
-  background: none;
-  top: 20px;
-  right: 30px;
-  border: none;
-  width: 36px;
-  height: 36px;
-  cursor: pointer;
-}
-
-.searchBar-area {
-  position: relative;
-  height: 40px;
-}
-
-.searchBar-area i {
-  position: absolute;
-  top: 1rem;
-  left: 0;
-  color: #fff;
-}
-
-header nav .searchBar {
-  position: relative;
-  border: none;
-  width: 90%;
-  border-bottom: 2px solid #fff;
-  padding: 10px 0 10px 25px;
-  background: none;
-  color: #fff;
-  font-size: 1.5rem;
-}
-
-header nav .searchBar:focus {
-  outline: none;
-  caret-color: #fff;
-}
-
-header nav .searchBar::placeholder {
-  color: #2b825d;
-}
-
-header .gnb {
-  border-bottom: 1px solid #fff;
-}
-
-header .gnb li {
-  margin: 30px 0;
-  font-size: 18px;
-  color: #2b825d;
-  cursor: pointer;
-}
-
-header .gnb li .type {
-  font-size: 12px;
-  letter-spacing: 2px;
-}
-
-header .gnb li .title {
-  color: #fff;
-  font-family: 'Nanum Myeongjo', serif;
-  margin-top: 1rem;
-  line-height: 2.5rem;
-}
-
-header .mnb {
-  margin: 30px 0;
-}
-
-header .mnb li {
-  margin-bottom: 1rem;
-  cursor: pointer;
-}
-
-header .mnb li .title {
-  color: #fff;
-  font-size: 1.8rem;
-  margin-right: 1rem;
-}
-
-header .mnb li .sub-title {
-  color: #2b825d;
-  font-size: 1.3rem;
-}
-
-header .bnb {
-  border-top: 1px solid #fff;
-  padding-top: 20px;
-}
-
-header .bnb li {
-  float: left;
-  color: #fff;
-  margin-right: 3rem;
-  border-bottom: 4px solid #fff;
-  padding-bottom: 5px;
-  cursor: pointer;
-  font-size: 1.8rem;
-}
-
-header nav .btn-close-menu span {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  display: inline-block;
-  width: 36px;
-  height: 4px;
-  background: #fff;
-  transform: rotate(45deg);
-}
-
-header nav .btn-close-menu span:last-child {
-  transform: rotate(135deg);
 }
 
 /* main */
@@ -706,8 +462,8 @@ main .inner {
 .banner .btn-more::after {
   content: '';
   position: absolute;
-  bottom: 1.5rem;
-  left: 3rem;
+  bottom: 1.5em;
+  left: 3em;
   transform: translateY(-50%);
   background: url('../img/calendar/bu_btn.png') no-repeat center/cover;
   width: 41px;
@@ -718,7 +474,7 @@ main .inner {
 
 footer {
   border-top: 1px solid #ccc;
-  padding-top: 3rem;
+  padding-top: 3em;
   position: relative;
 }
 
