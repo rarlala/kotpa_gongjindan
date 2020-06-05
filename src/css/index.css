@@ -10,19 +10,6 @@ body {
   font-family: 'Noto Sans KR', sans-serif;
 }
 
-.hidden {
-  display: none;
-}
-
-.a11y-hidden {
-  text-indent: -9999px;
-  width: 1px;
-  height: 1px;
-  font-size: 0;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
 .mobile {
   display: none;
 }
@@ -54,10 +41,6 @@ button:focus {
 .plus:hover {
   transform: rotate(540deg);
   background: url('../img/contents/plus_on.png') no-repeat center/cover;
-}
-
-.hidden {
-  display: none;
 }
 
 /* visual */
@@ -731,48 +714,6 @@ address {
     height: 160vw;
   }
 
-  header {
-    background: transparent;
-    position: absolute;
-    width: 100%;
-  }
-
-  header .group {
-    padding: 10px 20px;
-  }
-
-  header .group>a {
-    border-bottom: none;
-    font-size: 0px;
-    display: inline-block;
-    top: 0;
-  }
-
-  header .group .subscribe {
-    display: none;
-  }
-
-  header .mobile {
-    display: inline-block;
-    position: relative;
-  }
-
-  header .mobile::before {
-    display: inline-block;
-    font-size: 2rem;
-  }
-
-  header .group .btn-menu {
-    width: 32px;
-    height: 20px;
-    margin-left: 0;
-  }
-
-  header .group .btn-menu span {
-    width: 25px;
-    height: 4px;
-  }
-
   main {
     width: 100%;
   }
@@ -889,15 +830,6 @@ address {
 /* ------ media query  680px 이하 ------*/
 
 @media screen and (max-width: 680px) {
-
-  header {
-    right: 0;
-  }
-
-  header nav {
-    right: -100%;
-    width: 100%;
-  }
 
   .contents-list li:nth-child(2),
   .contents-list li:nth-child(5) {

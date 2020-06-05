@@ -126,7 +126,7 @@ header .dark-bg {
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 20;
+  z-index: 30;
   display: none;
   cursor: pointer;
 }
@@ -261,4 +261,61 @@ header nav .btn-close-menu span {
 
 header nav .btn-close-menu span:last-child {
   transform: rotate(135deg);
+}
+
+/* ------ media query 800px 이하 ------*/
+
+@media screen and (max-width: 800px) {
+  header {
+    background: transparent;
+    position: absolute;
+    width: 100%;
+  }
+
+  header .group {
+    padding: 10px 20px;
+  }
+
+  header .group>a {
+    border-bottom: none;
+    font-size: 0px;
+    display: inline-block;
+    top: 0;
+  }
+
+  header .group .subscribe {
+    display: none;
+  }
+
+  header .mobile {
+    display: inline-block;
+    position: relative;
+  }
+
+  header .mobile::before {
+    display: inline-block;
+    font-size: 2rem;
+  }
+
+  header .group .btn-menu {
+    width: 32px;
+    height: 20px;
+    margin-left: 0;
+  }
+
+  header .group .btn-menu span {
+    width: 25px;
+    height: 4px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  header {
+    right: 0;
+  }
+
+  header nav {
+    right: -100%;
+    width: 100%;
+  }
 }
