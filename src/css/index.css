@@ -14,10 +14,6 @@ body {
   display: none;
 }
 
-button:focus {
-  outline: none;
-}
-
 .point-title {
   color: #edc06a;
   font-size: 1.6rem;
@@ -275,7 +271,6 @@ main .inner {
 .news-list li:hover .title {
   color: #edc06a;
 }
-
 
 .news-list li .text {
   font-size: 1.3rem;
@@ -699,6 +694,47 @@ address {
 /* ------ media query 800px 이하 ------*/
 
 @media screen and (max-width: 800px) {
+  header {
+    background: transparent;
+    position: absolute;
+    width: 100%;
+  }
+
+  header .group {
+    padding: 10px 20px;
+  }
+
+  header .group>a {
+    border-bottom: none;
+    font-size: 0px;
+    display: inline-block;
+    top: 0;
+  }
+
+  header .group .subscribe {
+    display: none;
+  }
+
+  header .mobile {
+    display: inline-block;
+    position: relative;
+  }
+
+  header .mobile::before {
+    display: inline-block;
+    font-size: 2rem;
+  }
+
+  header .group .btn-menu {
+    width: 32px;
+    height: 20px;
+    margin-left: 0;
+  }
+
+  header .group .btn-menu span {
+    width: 25px;
+    height: 4px;
+  }
 
   .point-title {
     font-size: 1.2rem;
@@ -830,6 +866,14 @@ address {
 /* ------ media query  680px 이하 ------*/
 
 @media screen and (max-width: 680px) {
+  header {
+    right: 0;
+  }
+
+  header nav {
+    right: -100%;
+    width: 100%;
+  }
 
   .contents-list li:nth-child(2),
   .contents-list li:nth-child(5) {

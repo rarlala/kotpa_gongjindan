@@ -1,45 +1,4 @@
 $(function() {
-  // header follow, sns 내부 ul slide 처리
-
-  $('.btn-follow')
-    .on('mouseover', function() {
-      if ($(window).width() > 783) {
-        $('.follow-list').slideDown();
-      } else {
-        $(this).css({
-          color: 'gray',
-        });
-      }
-    })
-    .on('mouseleave', function() {
-      if ($(window).width() > 783) {
-        $('.follow-list').slideUp();
-      } else {
-        $(this).css({
-          color: 'black',
-        });
-      }
-    });
-
-  $('.btn-sns')
-    .on('mouseover', function() {
-      if ($(window).width() > 783) {
-        $('.sns-list').slideDown();
-      } else {
-        $(this).css({
-          color: 'gray',
-        });
-      }
-    })
-    .on('mouseleave', function() {
-      if ($(window).width() > 783) {
-        $('.sns-list').slideUp();
-      } else {
-        $(this).css({
-          color: 'black',
-        });
-      }
-    });
 
   // contents img hover 시 이미지 변경 처리
 

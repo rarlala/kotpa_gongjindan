@@ -35,6 +35,48 @@ $(function() {
         .attr('src', hover2Li + '_off.png');
     });
 
+  // header follow, sns 내부 ul slide 처리
+
+  $('.btn-follow')
+    .on('mouseover', function() {
+      if ($(window).width() > 783) {
+        $('.follow-list').slideDown();
+      } else {
+        $(this).css({
+          color: 'gray',
+        });
+      }
+    })
+    .on('mouseleave', function() {
+      if ($(window).width() > 783) {
+        $('.follow-list').slideUp();
+      } else {
+        $(this).css({
+          color: 'black',
+        });
+      }
+    });
+
+  $('.btn-sns')
+    .on('mouseover', function() {
+      if ($(window).width() > 783) {
+        $('.sns-list').slideDown();
+      } else {
+        $(this).css({
+          color: 'gray',
+        });
+      }
+    })
+    .on('mouseleave', function() {
+      if ($(window).width() > 783) {
+        $('.sns-list').slideUp();
+      } else {
+        $(this).css({
+          color: 'black',
+        });
+      }
+    });
+
   // menu 버튼 클릭 시 메뉴 나오게 처리
   $('.btn-menu').on('click', function() {
     $('.dark-bg').stop().css({
