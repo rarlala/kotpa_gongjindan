@@ -16,15 +16,21 @@ body {
   left: 0;
   width: 100%;
   height: 100vh;
+  max-height: 100vh;
   box-sizing: border-box;
   border: 30px solid #545454;
-  z-index: 30;
+  overflow: scroll;
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .wrap {
   width: 100%;
-  padding: 30px;
   box-sizing: border-box;
+  overflow: scroll;
 }
 
 .scroll {
@@ -47,10 +53,9 @@ body {
 
 /* header-area */
 
-.header-area {
+.header-box {
   height: 90px;
   width: calc(100% - 60px);
-  overflow: hidden;
   position: fixed;
   top: 30px;
   background: #fff;
@@ -58,7 +63,7 @@ body {
   z-index: 100;
 }
 
-.header-area .logo {
+.header-box .logo {
   position: absolute;
   top: 0;
   left: 30px;
@@ -67,7 +72,7 @@ body {
   height: 90px;
 }
 
-.header-area .title span {
+.header-box .title span {
   position: absolute;
   bottom: 20px;
   left: 210px;
@@ -75,9 +80,21 @@ body {
   color: #555;
 }
 
-.header-area .title span em {
+.header-box .title span em {
   font-weight: bold;
   color: #000;
+}
+
+/* .header-area header {
+  right: -30px;
+} */
+
+header nav {
+  right: -60%;
+}
+
+.header-area header nav {
+  top: -30px;
 }
 
 /* main */
@@ -89,7 +106,7 @@ main {
 }
 
 main .title-area {
-  margin-top: 90px;
+  margin-top: 60px;
   width: 100%;
   height: 500px;
   background: url('../img/preivew/calendar06_on.jpg') no-repeat center/cover;
@@ -448,6 +465,7 @@ strong {
 }
 
 .banner .banner-container {
+  position: relative;
   box-sizing: border-box;
   padding: 2em 3em;
   float: left;

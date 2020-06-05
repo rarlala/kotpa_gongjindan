@@ -40,9 +40,18 @@ $(function() {
     $('.dark-bg').stop().css({
       display: 'inline-block',
     });
-    $('nav').stop().animate({
-      right: '0',
-    });
+
+    // 메인 페이지와 세부 페이지에 따른 nav 위치가 달라 조건 분기
+    if ($('nav').hasClass('detail-page-menu')) {
+      $('nav').stop().animate({
+        right: '-30px',
+      });
+    } else {
+      $('nav').stop().animate({
+        right: '0',
+      });
+    }
+
     $('body').addClass('not_scroll');
   });
 
@@ -52,9 +61,11 @@ $(function() {
     $('.dark-bg').stop().css({
       display: 'none',
     });
+
     $('nav').stop().animate({
       right: '-100%',
     });
+
     $('body').removeClass('not_scroll');
   });
 
