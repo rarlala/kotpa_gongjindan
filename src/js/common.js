@@ -105,7 +105,7 @@ $(function() {
     });
 
     $('nav').stop().animate({
-      right: '-100%',
+      right: '-120%',
     });
 
     $('body').removeClass('not_scroll');
@@ -117,7 +117,7 @@ $(function() {
       display: 'none',
     });
     $('nav').stop().animate({
-      right: '-100%',
+      right: '-120%',
     });
     $('body').removeClass('not_scroll');
   });
