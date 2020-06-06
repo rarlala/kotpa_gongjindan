@@ -74,6 +74,7 @@ body {
   background: url('../img/preivew/sub_logo.png') no-repeat center/contain;
   width: 170px;
   height: 90px;
+  z-index: 20;
 }
 
 .header-box .title span {
@@ -91,7 +92,7 @@ body {
 
 header nav {
   right: -60%;
-  width: 50%;
+  width: 38.7%;
 }
 
 .header-area header nav {
@@ -119,6 +120,7 @@ main .title-area {
 main .title-area .point-title {
   letter-spacing: 5px;
   padding: 65px 0 20px;
+  font-weight: 300;
 }
 
 main .title-area .title {
@@ -142,7 +144,7 @@ main .text-area {
 main .text-area .ment {
   text-align: center;
   font-size: 2.5em;
-  padding: 2.5em;
+  padding: 2.3em;
   border-bottom: 1px solid #196560;
 }
 
@@ -182,7 +184,8 @@ strong {
   letter-spacing: 3px;
 }
 
-strong {
+.view-point strong,
+.stage-behind strong {
   font-weight: 400;
   font-size: 2.6rem;
 }
@@ -209,7 +212,8 @@ strong {
   line-height: 1.8em;
 }
 
-.view-point .view-point-img {
+.view-point .view-point-img,
+.view-point .view-point-video {
   float: right;
   width: 42%;
 }
@@ -224,7 +228,17 @@ strong {
   width: 42%;
 }
 
-.view-point dl .view-point-video span {
+.view-point .view-point-video {
+  height: 240px;
+  margin-bottom: 30px;
+}
+
+.view-point iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.view-point dl .view-point-video div {
   font-size: 1.3rem;
 }
 
@@ -264,7 +278,6 @@ strong {
 .stage-behind p:last-child {
   margin-top: 30px;
   text-align: left;
-  /* word-break: keep-all; */
   line-height: 1.8em;
 }
 
@@ -290,11 +303,12 @@ strong {
 
 .content-detail .right {
   float: left;
+  padding-left: 30px;
 }
 
 .content-detail .left img {
   display: block;
-  width: 100%;
+  width: 280px;
   margin-bottom: 50px;
 }
 
@@ -378,6 +392,73 @@ strong {
   margin-left: 10px;
 }
 
+/* banner */
+
+.banner {
+  margin: 50px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner .banner-container {
+  position: relative;
+  box-sizing: border-box;
+  padding: 2.5em 3em;
+  float: left;
+  background: #fff;
+  width: 50%;
+  background: url('../img/preivew/include_05_on.jpg') no-repeat center/cover;
+}
+
+.banner-container a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  transition: all 0.5s;
+}
+
+.banner-container:hover a::after {
+  background: transparent;
+}
+
+.banner .banner-container:nth-child(2) {
+  background: url('../img/preivew/include_02_off.jpg') no-repeat center/cover;
+}
+
+.banner .banner-container:first-child {
+  text-align: right;
+}
+
+.banner .banner-container:first-child .btn-more {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  transform: scaleX(-1);
+}
+
+.banner .banner-container:last-child .btn-more {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.banner .point-title {
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.banner .content-title {
+  font-size: 2.2rem;
+  color: #fff;
+  font-weight: normal;
+  padding: 1em 0 0.5em;
+}
+
 /* other-show */
 
 .other-show {
@@ -404,18 +485,49 @@ strong {
   margin-left: 6.5%;
 }
 
+.other-show li a {
+  display: block;
+}
+
+.other-show li a div {
+  position: relative;
+}
+
+.other-show li a div::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  transition: all 0.5s;
+}
+
+.other-show li a:hover div::after {
+  background: transparent;
+}
+
 .other-show li img {
-  max-width: 195px;
+  position: relative;
+  width: 100%;
 }
 
 .other-show li .sub-title {
   margin-top: 15px;
   font-size: 1.4rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .other-show li .title {
   font-size: 1.8rem;
   padding-bottom: 2em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* subscribe */
@@ -456,70 +568,6 @@ strong {
   background: url('../img/calendar/bu_btn.png') no-repeat center/cover;
   width: 41px;
   height: 6px;
-}
-
-/* banner */
-
-.banner {
-  margin: 50px 0;
-  overflow: hidden;
-}
-
-.banner .banner-container {
-  position: relative;
-  box-sizing: border-box;
-  padding: 2em 3em;
-  float: left;
-  background: #fff;
-  width: 50%;
-  background: url('../img/preivew/include_05_on.jpg') no-repeat center/cover;
-}
-
-.banner .banner-container:nth-child(2) {
-  background: url('../img/preivew/include_02_off.jpg') no-repeat center/cover;
-}
-
-.banner .first-banner>a .point-title {
-  color: #ffb3c4;
-  letter-spacing: 2px;
-}
-
-.banner ul {
-  float: right;
-  position: relative;
-  width: 50%;
-}
-
-.banner ul li {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #fff;
-  padding: 2em 3em;
-  box-sizing: border-box;
-}
-
-.banner ul li:first-child {
-  background: url('../img/banner/banner_event2.png') no-repeat center/cover;
-}
-
-.banner ul li:nth-child(2) {
-  background: url('../img/banner/banner_event.png') no-repeat center/cover;
-}
-
-.banner .point-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #fff;
-  letter-spacing: 2px;
-}
-
-.banner .content-title {
-  font-size: 2rem;
-  color: #fff;
-  font-weight: normal;
-  padding: 1em 0 2em;
 }
 
 /* footer */
@@ -578,17 +626,90 @@ address {
   margin: 0.5rem 0 3rem;
 }
 
-/* ------ media query 800px 이하 ------*/
+/* ------ media query 1025px 이하 ------*/
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1125px) {
   header {
-    background: transparent;
-    position: absolute;
+    width: 150%;
+  }
+}
+
+/* ------ media query 1025px 이하 ------*/
+
+@media screen and (max-width: 1025px) {
+
+  .inner {
     width: 100%;
   }
 
+  .banner {
+    margin: 50px 10px;
+  }
+
+  .other-show {
+    margin: 0 10px;
+  }
+
+  .subscribe-area {
+    margin: 0 10px 20px;
+    height: 180px;
+    text-align: center;
+  }
+
+  .subscribe-area p {
+    line-height: 120px;
+  }
+
+  .subscribe-area .btn-subscribe {
+    top: 100%;
+    right: 30%;
+    left: 30%;
+  }
+
+  footer {
+    background: #E9E9E9;
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+/* ------ media query 800px 이하 ------*/
+
+@media screen and (max-width: 800px) {
+
+  html {
+    font-size: 9px;
+  }
+
+  .header-box {
+    top: 0;
+    width: 100%;
+    height: 80px;
+  }
+
+  .header-box .logo {
+    left: 20px;
+    width: 120px;
+  }
+
+  .header-box .title span {
+    display: none;
+  }
+
+  header {
+    width: 100%;
+    position: absolute;
+    background: transparent;
+  }
+
+  header nav {
+    margin: 30px 30px 0 0;
+    right: -80%;
+    width: 70%;
+  }
+
   header .group {
-    padding: 10px 20px;
+    padding: 20px 10px;
   }
 
   header .group>a {
@@ -622,17 +743,203 @@ address {
     width: 25px;
     height: 4px;
   }
+
+  header .btn-close-menu {
+    right: 100px;
+  }
+
+  /* main */
+
+  main .title-area {
+    height: 400px;
+    font-size: 1.2rem;
+  }
+
+  main .title-area img {
+    width: 90px;
+  }
+
+  main .title-area .title {
+    margin: 25px 0 20px;
+    line-height: 1.5em;
+  }
+
+  main .text-area .ment {
+    font-size: 1.8em;
+  }
+
+  main .inner .intro {
+    margin-top: 30px;
+  }
+
+  .view-point,
+  .stage-behind,
+  .content-detail {
+    padding: 0 10px;
+  }
+
+  .stage-behind {
+    padding-bottom: 30px;
+  }
+
+  .view-point dl {
+    margin-top: 15px;
+  }
+
+  .view-point img {
+    width: 50px;
+  }
+
+  .view-point .view-point-title {
+    font-size: 1.8rem;
+  }
+
+  .view-point .view-point-text,
+  .view-point .view-point-img,
+  .view-point .view-point-video,
+  .view-point dl.cross .view-point-text,
+  .view-point dl.cross .view-point-video {
+    float: none;
+    width: 100%;
+  }
+
+  .view-point .view-point-img ul li {
+    height: 400px;
+  }
+
+  .view-point .view-point-video {
+    height: 400px;
+  }
+
+  .content-detail .left img {
+    width: 240px;
+  }
+
+  .content-detail .btn-show-more {
+    margin-top: 30px;
+  }
+
+}
+
+/* ------ media query 762px 이하 ------*/
+
+@media screen and (max-width: 762px) {
+  .frame {
+    border: 0;
+  }
 }
 
 /* ------ media query  680px 이하 ------*/
 
 @media screen and (max-width: 680px) {
+
   header {
     right: 0;
   }
 
   header nav {
-    right: -100%;
+    box-sizing: border-box;
+    right: -110%;
     width: 100%;
+  }
+
+  main .text-area .ment {
+    padding: 2.3em 0;
+  }
+
+  .content-detail .left img {
+    width: 210px;
+  }
+
+  .content-detail .right {
+    padding-left: 20px;
+  }
+
+  .content-detail .right p {
+    margin-top: 0;
+  }
+
+  .content-detail strong {
+    font-size: 2rem;
+    margin: 10px 0 15px;
+  }
+
+  .content-detail .right .line-break {
+    display: block;
+  }
+
+  .content-detail .btn-show-more {
+    font-size: 1.5rem;
+    padding: 8px 25px;
+    margin-top: 12px;
+  }
+
+  /* share, banner */
+
+  .share,
+  .banner {
+    margin: 10px 0;
+    padding: 0 10px;
+  }
+
+  .share-container {
+    height: 80px;
+    text-align: center;
+  }
+
+  .share-container .share-btn {
+    left: 5px;
+    top: 45px;
+  }
+
+  .banner .banner-container {
+    float: none;
+    width: 100%;
+    margin-bottom: 3px;
+  }
+
+  /* other-show */
+
+  .other-show {
+    padding: 10px;
+  }
+
+  .other-show h2 {
+    font-size: 1.6rem;
+  }
+
+  .other-show li {
+    width: 46%;
+  }
+
+  .other-show li+li {
+    margin-left: 0;
+  }
+
+  .other-show li:nth-child(2),
+  .other-show li:nth-child(4) {
+    margin-left: 5%;
+  }
+
+  .other-show li a div img {
+    display: block;
+  }
+
+  /* subscribe */
+  .subscribe-area {
+    height: 100px;
+    font-size: 1.4rem;
+  }
+
+  .subscribe-area p {
+    line-height: 60px;
+  }
+
+  .subscribe-area .btn-subscribe {
+    top: 50px;
+    transform: translateY(0%);
+    padding: 10px;
+    font-size: 1.4rem;
+    text-align: left;
   }
 }
