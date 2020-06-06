@@ -1,9 +1,8 @@
-$(function() {
-
+$(function () {
   // contents img hover 시 이미지 변경 처리
 
   $('main .contents-list li')
-    .on('mouseover', function() {
+    .on('mouseover', function () {
       var nowLi = $(this).find('img').attr('src');
       var hoverLi = nowLi.split('_off')[0];
       if (!hoverLi.match('_on.png')) {
@@ -13,7 +12,7 @@ $(function() {
           .attr('src', hoverLi + '_on.png');
       }
     })
-    .on('mouseleave', function() {
+    .on('mouseleave', function () {
       var now2Li = $(this).find('img').attr('src');
       var hover2Li = now2Li.split('_on')[0];
       if (!hover2Li.match('_off.png')) {
@@ -26,7 +25,7 @@ $(function() {
 
   //news img hover 시 이미지 변경 처리
   $('.news-list li')
-    .on('mouseover', function() {
+    .on('mouseover', function () {
       var nowLi = $(this).find('img').attr('src');
       var hoverLi = nowLi.split('_off')[0];
       if (!hoverLi.match('_on.png')) {
@@ -36,7 +35,7 @@ $(function() {
           .attr('src', hoverLi + '_on.png');
       }
     })
-    .on('mouseleave', function() {
+    .on('mouseleave', function () {
       var now2Li = $(this).find('img').attr('src');
       var hover2Li = now2Li.split('_on')[0];
       if (!hover2Li.match('_off.png')) {
@@ -50,7 +49,7 @@ $(function() {
   // calendar img hover 시 이미지 변경 처리
 
   $('.calendar-list li')
-    .on('mouseover', function() {
+    .on('mouseover', function () {
       var nowLi = $(this).find('img').attr('src');
       var hoverLi = nowLi.split('_off')[0];
 
@@ -61,7 +60,7 @@ $(function() {
           .attr('src', hoverLi + '_on.jpg');
       }
     })
-    .on('mouseleave', function() {
+    .on('mouseleave', function () {
       var now2Li = $(this).find('img').attr('src');
       var hover2Li = now2Li.split('_on')[0];
       if (!hover2Li.match('_off.jpg')) {
@@ -74,7 +73,7 @@ $(function() {
 
   var $window = $(window);
 
-  $window.scroll(function() {
+  $window.scroll(function () {
     // 스크롤에 따른 이미지 등장 fade-up 애니메이션 처리
     var scrollPosition = $(window).height() + $(window).scrollTop(),
       scrollNowPosition = $(window).scrollTop(),
@@ -84,13 +83,15 @@ $(function() {
       newsPosition = $('.news').offset().top - 100;
 
     if (scrollPosition > contentsListLineOnePosition) {
-      $('.contents-list li:nth-child(1)').animate({
+      $('.contents-list li:nth-child(1)').animate(
+        {
           opacity: '1',
           top: '0',
         },
         1000
       );
-      $('.contents-list li:nth-child(2)').delay(500).animate({
+      $('.contents-list li:nth-child(2)').delay(500).animate(
+        {
           opacity: '1',
           top: '0',
         },
@@ -99,13 +100,15 @@ $(function() {
     }
 
     if (scrollPosition > contentsListLineTwoPosition) {
-      $('.contents-list li:nth-child(3)').animate({
+      $('.contents-list li:nth-child(3)').animate(
+        {
           opacity: '1',
           top: '0',
         },
         1000
       );
-      $('.contents-list li:nth-child(3) img').animate({
+      $('.contents-list li:nth-child(3) img').animate(
+        {
           opacity: '1',
           left: '0',
         },
@@ -114,13 +117,15 @@ $(function() {
     }
 
     if (scrollPosition > contentsListLineThreePosition) {
-      $('.contents-list li:nth-child(4)').animate({
+      $('.contents-list li:nth-child(4)').animate(
+        {
           opacity: '1',
           top: '0',
         },
         1000
       );
-      $('.contents-list li:nth-child(5)').delay(500).animate({
+      $('.contents-list li:nth-child(5)').delay(500).animate(
+        {
           opacity: '1',
           top: '0',
         },
@@ -137,7 +142,7 @@ $(function() {
       var bottomVisualImage = topVisualImage.split('1.gif')[0];
 
       $('.visual-area').css({
-        background: '#eec06a'
+        background: '#eec06a',
       });
 
       if (!bottomVisualImage.match('2.jpg')) {
@@ -153,7 +158,7 @@ $(function() {
       topVisualImage = bottomVisualImage.split('2.jpg')[0];
 
       $('.visual-area').css({
-        background: '#67b274'
+        background: '#67b274',
       });
 
       if (!topVisualImage.match('1.gif')) {
