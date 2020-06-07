@@ -146,8 +146,9 @@ $(function () {
       });
 
       if (!bottomVisualImage.match('2.jpg')) {
+        var bgValue = 'url(' + bottomVisualImage + '2.jpg) no-repeat top/contain';
         $('.visual').css({
-          background: `url(${bottomVisualImage}2.jpg) no-repeat top/contain`,
+          background: bgValue,
         });
       }
     } else {
@@ -162,8 +163,10 @@ $(function () {
       });
 
       if (!topVisualImage.match('1.gif')) {
+        var bgValue = 'url(' + topVisualImage + '1.gif) no-repeat top/contain';
+
         $('.visual').css({
-          background: `url(${topVisualImage}1.gif) no-repeat top/contain`,
+          background: bgValue,
         });
       }
     }

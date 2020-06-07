@@ -86,7 +86,7 @@ header {
 }
 
 header .group {
-  padding: 2rem 3rem 0 0;
+  padding: 20px 30px 0 0;
 }
 
 /* main */
@@ -189,7 +189,7 @@ main .inner {
 
 .contents-list .title {
   font-size: 1.7rem;
-  margin: 2rem 0;
+  margin: 20px 0;
   font-family: 'Nanum Myeongjo', serif;
   letter-spacing: -1.5px;
 }
@@ -289,7 +289,7 @@ main .inner {
 
 .calendar .title-area {
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: 30px;
   text-align: left;
 }
 
@@ -348,7 +348,7 @@ main .inner {
   text-align: center;
   font-size: 1.2rem;
   color: #797979;
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
 }
 
 .calendar .btn-apply {
@@ -380,7 +380,7 @@ main .inner {
 /* banner */
 
 .banner {
-  margin-bottom: 5rem;
+  margin-bottom: 50px;
   overflow: hidden;
 }
 
@@ -452,7 +452,7 @@ main .inner {
 
 footer {
   border-top: 1px solid #ccc;
-  padding-top: 3em;
+  padding: 30px 0;
   position: relative;
 }
 
@@ -460,7 +460,7 @@ footer .logo a {
   display: inline-block;
   width: 200px;
   height: 30px;
-  margin-bottom: 3rem;
+  margin-bottom: 30px;
 }
 
 footer .logo a img {
@@ -470,15 +470,15 @@ footer .logo a img {
 
 footer .top {
   font-size: 1.5rem;
-  padding-right: 3rem;
+  padding-right: 30px;
   position: absolute;
-  top: 3rem;
+  top: 30px;
   right: 0;
   cursor: pointer;
 }
 
 footer .top img {
-  margin-left: 1rem;
+  margin-left: 10px;
   position: absolute;
   top: 2px;
   right: 0;
@@ -500,7 +500,7 @@ address {
 
 .copyright {
   display: block;
-  margin: 0.5rem 0 3rem;
+  margin: 5px 0;
 }
 
 /* ------ media query 1701px 이상 ------*/
@@ -579,7 +579,7 @@ address {
   /* calendar */
 
   .calendar {
-    padding: 3rem;
+    padding: 30px;
   }
 
   .calendar-list li+li {
@@ -596,7 +596,7 @@ address {
 
   .banner .first-banner>a,
   .banner ul li {
-    padding: 0.5rem 2rem;
+    padding: 5px 20px;
   }
 
   .banner .point-title {
@@ -608,8 +608,8 @@ address {
   }
 
   .banner .btn-more::after {
-    bottom: 0.5rem;
-    left: 2rem;
+    bottom: 5px;
+    left: 20px;
     width: 36px;
   }
 
@@ -771,7 +771,7 @@ address {
   }
 
   .contents-list li:nth-child(3) {
-    margin-bottom: 5rem;
+    margin-bottom: 50px;
   }
 
   .contents-list li:nth-child(3) figure img {

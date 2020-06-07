@@ -8,6 +8,8 @@ body {
   width: 100%;
   position: relative;
   overflow-x: hidden;
+  height: 4000px;
+  overflow-y: scroll;
 }
 
 .mobile {
@@ -27,14 +29,8 @@ body {
   -ms-overflow-style: none;
 }
 
-::-webkit-scrollbar {
+.frame::-webkit-scrollbar {
   display: none;
-}
-
-.wrap {
-  width: 100%;
-  box-sizing: border-box;
-  overflow: scroll;
 }
 
 .scroll {
@@ -173,7 +169,8 @@ main .inner .intro p {
 }
 
 .section-title,
-strong {
+.view-point h2,
+.stage-behind h2 {
   color: #654219;
 }
 
@@ -361,7 +358,6 @@ strong {
   color: #fff;
 }
 
-
 /* share */
 
 .share {
@@ -418,7 +414,7 @@ strong {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
   transition: all 0.5s;
 }
 
@@ -501,7 +497,7 @@ strong {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
   transition: all 0.5s;
 }
 
@@ -592,15 +588,15 @@ footer .logo a img {
 
 footer .top {
   font-size: 1.5rem;
-  padding-right: 3rem;
+  padding-right: 30px;
   position: absolute;
-  top: 3rem;
+  top: 30px;
   right: 0;
   cursor: pointer;
 }
 
 footer .top img {
-  margin-left: 1rem;
+  margin-left: 10px;
   position: absolute;
   top: 2px;
   right: 0;
@@ -623,7 +619,7 @@ address {
 .copyright {
   display: block;
   font-size: 0.5rem;
-  margin: 0.5rem 0 3rem;
+  margin: 5px 0;
 }
 
 /* ------ media query 1025px 이하 ------*/
@@ -679,6 +675,10 @@ address {
 
   html {
     font-size: 9px;
+  }
+
+  .frame {
+    border: 0;
   }
 
   .header-box {
@@ -819,14 +819,6 @@ address {
     margin-top: 30px;
   }
 
-}
-
-/* ------ media query 762px 이하 ------*/
-
-@media screen and (max-width: 762px) {
-  .frame {
-    border: 0;
-  }
 }
 
 /* ------ media query  680px 이하 ------*/

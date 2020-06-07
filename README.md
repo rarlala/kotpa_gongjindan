@@ -33,8 +33,12 @@ HTML5 + CSS3 + jQuery + JavaScript 를 활용한 퍼블리싱 작업 진행
 - preview.html / break-point
   - [x] 1125px 이하 // header
   - [x] 800px 이하
-  - [x] 762px 이하 // frame
   - [x] 680px 이하
+
+### cross-browsing check
+
+- [x] Chrome
+- [x] Explorer
 
 ### 작업 리스트
 

@@ -26,7 +26,7 @@ header .group>a {
   font-size: 1.5rem;
   border-bottom: 4px solid #000;
   padding: 5px 0;
-  margin: 1rem;
+  margin: 10px;
   font-weight: bold;
   top: -10px;
 }
@@ -65,13 +65,13 @@ header .btn-sns .sns-list {
   left: 0;
   width: 90px;
   height: auto;
-  background: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   display: none;
 }
 
 header .btn-sns .sns-list {
   width: 60px;
-  background: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 header .btn-follow .follow-list ul,
@@ -93,7 +93,7 @@ header .group .btn-menu {
   height: 25px;
   position: relative;
   border-bottom: none;
-  margin-left: 2rem;
+  margin-left: 20px;
   cursor: pointer;
 }
 
@@ -116,7 +116,7 @@ header .group .btn-menu span:last-child {
 }
 
 header .group .btn-menu:hover span {
-  background: gray;
+  background-color: gray;
 }
 
 header .dark-bg {
@@ -125,7 +125,7 @@ header .dark-bg {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 30;
   display: none;
   cursor: pointer;
@@ -142,7 +142,7 @@ header nav {
   background: #67b274;
   overflow-y: scroll;
   box-sizing: border-box;
-  padding: 5rem;
+  padding: 50px;
   font-size: 1.5rem;
   z-index: 30;
 }
@@ -165,7 +165,7 @@ header nav .btn-close-menu {
 
 .searchBar-area i {
   position: absolute;
-  top: 1rem;
+  top: 10px;
   left: 0;
   color: #fff;
 }
@@ -209,8 +209,8 @@ header .gnb li .type {
 header .gnb li .title {
   color: #fff;
   font-family: 'Nanum Myeongjo', serif;
-  margin-top: 1rem;
-  line-height: 2.5rem;
+  margin-top: 10px;
+  line-height: 25px;
 }
 
 header .mnb {
@@ -218,14 +218,14 @@ header .mnb {
 }
 
 header .mnb li {
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
   cursor: pointer;
 }
 
 header .mnb li .title {
   color: #fff;
   font-size: 1.8rem;
-  margin-right: 1rem;
+  margin-right: 10px;
 }
 
 header .mnb li .sub-title {
@@ -241,7 +241,7 @@ header .bnb {
 header .bnb li {
   float: left;
   color: #fff;
-  margin-right: 3rem;
+  margin-right: 30px;
   border-bottom: 4px solid #fff;
   padding-bottom: 5px;
   cursor: pointer;
