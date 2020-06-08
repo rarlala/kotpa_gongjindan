@@ -8,8 +8,6 @@ body {
   width: 100%;
   position: relative;
   overflow-x: hidden;
-  height: 4000px;
-  overflow-y: scroll;
 }
 
 .mobile {
@@ -17,20 +15,28 @@ body {
 }
 
 .frame {
+  position: relative;
+  box-sizing: border-box;
+  border: 30px solid #545454;
+}
+
+.top-frame {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
-  max-height: 100vh;
-  box-sizing: border-box;
-  border: 30px solid #545454;
-  overflow: scroll;
-  -ms-overflow-style: none;
+  height: 30px;
+  background: #545454;
+  z-index: 100;
 }
 
-.frame::-webkit-scrollbar {
-  display: none;
+.bottom-frame {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: #545454;
 }
 
 .scroll {
@@ -40,15 +46,6 @@ body {
 .inner {
   width: 965px;
   margin: 0 auto;
-}
-
-.a11y-hidden {
-  text-indent: -9999px;
-  width: 1px;
-  height: 1px;
-  font-size: 0;
-  overflow: hidden;
-  white-space: nowrap;
 }
 
 /* header-area */
@@ -679,6 +676,11 @@ address {
 
   .frame {
     border: 0;
+  }
+
+  .top-frame,
+  .bottom-frame {
+    height: 0;
   }
 
   .header-box {
