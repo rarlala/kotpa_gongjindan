@@ -80,7 +80,7 @@ $(function () {
       contentsListLineOnePosition = $('.contents-list li:nth-child(1)').offset().top,
       contentsListLineTwoPosition = $('.contents-list li:nth-child(3)').offset().top,
       contentsListLineThreePosition = $('.contents-list li:nth-child(4)').offset().top,
-      newsPosition = $('.news').offset().top - 100;
+      newsPosition = $('.news').offset().top - 130;
 
     if (scrollPosition > contentsListLineOnePosition) {
       $('.contents-list li:nth-child(1)').animate(
@@ -135,39 +135,24 @@ $(function () {
 
     // scroll 특정 위치가 되면 visual 이미지 변경하기
     if (scrollNowPosition > newsPosition) {
-      var topVisualImage = $('.visual')
-        .css('background-image')
-        .replace(/url\("*|"*\)/g, '');
-
+      var topVisualImage = $('.visual img').attr('src');
       var bottomVisualImage = topVisualImage.split('1.gif')[0];
 
-      $('.visual-area').css({
-        background: '#eec06a',
-      });
+      $('.visual-area').css({ background: '#eec06a' });
 
       if (!bottomVisualImage.match('2.jpg')) {
-        var bgValue = 'url(' + bottomVisualImage + '2.jpg) no-repeat top/contain';
-        $('.visual').css({
-          background: bgValue,
-        });
+        var bgValue = bottomVisualImage + '2.jpg';
+        $('.visual img').attr('src', bgValue);
       }
     } else {
-      bottomVisualImage = $('.visual')
-        .css('background-image')
-        .replace(/url\("*|"*\)/g, '');
-
+      bottomVisualImage = $('.visual img').attr('src');
       topVisualImage = bottomVisualImage.split('2.jpg')[0];
 
-      $('.visual-area').css({
-        background: '#67b274',
-      });
+      $('.visual-area').css({ background: '#67b274' });
 
       if (!topVisualImage.match('1.gif')) {
-        var bgValue = 'url(' + topVisualImage + '1.gif) no-repeat top/contain';
-
-        $('.visual').css({
-          background: bgValue,
-        });
+        var bgValue = topVisualImage + '1.gif';
+        $('.visual img').attr('src', bgValue);
       }
     }
   });

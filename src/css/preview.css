@@ -245,6 +245,7 @@ main .inner .intro p {
   width: 300%;
   white-space: nowrap;
   overflow: visible;
+  font-size: 0;
 }
 
 .view-point .view-point-img ul li {
@@ -254,17 +255,17 @@ main .inner .intro p {
 
 .view-point .view-point-img ul li.image01 {
   width: 33.33%;
-  background: url('../img/preivew/img1.jpg') no-repeat center/cover;
+  background: url('../img/preivew/img1.jpg') no-repeat center/contain;
 }
 
 .view-point .view-point-img ul li.image02 {
   width: 33.33%;
-  background: url('../img/preivew/img2.jpg') no-repeat center/cover;
+  background: url('../img/preivew/img2.jpg') no-repeat center/contain;
 }
 
 .view-point .view-point-img ul li.image03 {
   width: 33.33%;
-  background: url('../img/preivew/img3.jpg') no-repeat center/cover;
+  background: url('../img/preivew/img3.jpg') no-repeat center/contain;
 }
 
 /* .stage-behind */

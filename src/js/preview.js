@@ -1,21 +1,24 @@
 $(function () {
-  var clickNum = 1;
+  var clickNum = 0;
+
+  var List = $('.view-point-img').find('ul'),
+    firstLi = $('.view-point-img').find('ul li:first-child').clone();
+
+  List.append(firstLi);
 
   function SlideImg() {
-    var imgWidth = $('.view-point-img').width();
-
-    if (clickNum === 3) {
-      $('.view-point-img').find('ul').animate({
-        'margin-left': 0,
+    if (clickNum === 4) {
+      $('.view-point-img ul').css({
+        'margin-left': '0',
       });
-      clickNum = 1;
+      clickNum = 0;
     } else {
       $('.view-point-img')
         .find('ul')
         .animate({
-          'margin-left': -(imgWidth * clickNum),
+          'margin-left': -100 * clickNum + '%',
         });
-      clickNum += 1;
+      clickNum++;
     }
   }
 
