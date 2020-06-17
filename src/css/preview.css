@@ -48,6 +48,12 @@ body {
   margin: 0 auto;
 }
 
+/* body scroll 막는 코드 */
+.not_scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
 /* header-area */
 
 .header-box {
