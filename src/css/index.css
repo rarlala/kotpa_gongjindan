@@ -115,6 +115,7 @@ main .inner {
   background: #fff;
   text-align: center;
   opacity: 0;
+  cursor: pointer;
 }
 
 .contents-list li a {
@@ -933,5 +934,37 @@ address {
   .banner .content-title {
     font-size: 1.6rem;
     padding: 0.5em 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  .header-area .group nav {
+    display: none;
+  }
+
+  .not_scroll .header-area .group nav {
+    display: block;
+  }
+
+  .contents-list li:nth-child(2) .title {
+    font-size: 14px;
+  }
+
+  .contents-list li:nth-child(3) figure img {
+    width: 140px;
+  }
+
+  .calendar .btn-apply {
+    font-size: 1.5rem;
+    height: 2.5em;
+    line-height: 2.5em;
   }
 }

@@ -1,84 +1,66 @@
 $(function () {
+  preventDefaultAnchor();
+
+  function preventDefaultAnchor() {
+    $(document).on('click', 'a[href="#"]', function (e) {
+      e.preventDefault();
+    });
+  }
+
   // header
   // header follow, sns 내부 ul 내 li 아이콘 색상 hover 시 변경 처리
 
-  $('header .group .follow-list li img')
-    .on('mouseover', function () {
-      var nowLi = $(this).attr('src');
-      var hoverLi = nowLi.split('_off')[0];
-      $(this)
-        .stop()
-        .attr('src', hoverLi + '_on.png');
-    })
-    .on('mouseleave', function () {
-      var now2Li = $(this).attr('src');
-      var hover2Li = now2Li.split('_on')[0];
-      $(this)
-        .stop()
-        .attr('src', hover2Li + '_off.png');
-    });
+  imgChange('header .group .follow-list li img');
+  imgChange('header .group .sns-list li img');
 
-  $('header .group .sns-list li img')
-    .on('mouseover', function () {
-      var nowLi = $(this).attr('src');
-      var hoverLi = nowLi.split('_off')[0];
-      $(this)
-        .stop()
-        .attr('src', hoverLi + '_on.png');
-    })
-    .on('mouseleave', function () {
-      var now2Li = $(this).attr('src');
-      var hover2Li = now2Li.split('_on')[0];
-      $(this)
-        .stop()
-        .attr('src', hover2Li + '_off.png');
-    });
+  function imgChange(selector) {
+    $(selector)
+      .on('mouseenter focus', function () {
+        var nowLi = $(this).attr('src');
+        var hoverLi = nowLi.split('_off')[0];
+        $(this)
+          .stop()
+          .attr('src', hoverLi + '_on.png');
+      })
+      .on('mouseleave focusout', function () {
+        var now2Li = $(this).attr('src');
+        var hover2Li = now2Li.split('_on')[0];
+        $(this)
+          .stop()
+          .attr('src', hover2Li + '_off.png');
+      });
+  }
 
   // header follow, sns 내부 ul slide 처리
 
-  $('.btn-follow')
-    .on('mouseover', function () {
-      if ($(window).width() > 783) {
-        $('.follow-list').slideDown();
-      } else {
-        $(this).css({
-          color: 'gray',
-        });
-      }
-    })
-    .on('mouseleave', function () {
-      if ($(window).width() > 783) {
-        $('.follow-list').slideUp();
-      } else {
-        $(this).css({
-          color: 'black',
-        });
-      }
-    });
+  headerSlideDown('.btn-follow', '.follow-list');
+  headerSlideDown('.btn-sns', '.sns-list');
 
-  $('.btn-sns')
-    .on('mouseover', function () {
-      if ($(window).width() > 783) {
-        $('.sns-list').slideDown();
-      } else {
-        $(this).css({
-          color: 'gray',
-        });
-      }
-    })
-    .on('mouseleave', function () {
-      if ($(window).width() > 783) {
-        $('.sns-list').slideUp();
-      } else {
-        $(this).css({
-          color: 'black',
-        });
-      }
-    });
+  function headerSlideDown(selector, list) {
+    $(selector)
+      .on('mouseenter focus', function () {
+        if ($(window).width() > 783) {
+          $(list).slideDown();
+        } else {
+          $(this).css({
+            color: 'gray',
+          });
+        }
+      })
+      .on('mouseleave focusout', function () {
+        if ($(window).width() > 783) {
+          $(list).slideUp();
+        } else {
+          $(this).css({
+            color: 'black',
+          });
+        }
+      });
+  }
 
   // menu 버튼 클릭 시 메뉴 나오게 처리
-  $('.btn-menu').on('click', function () {
-    $('.dark-bg').stop().css({
+  $('.btn-menu').on('click focus', function () {
+    $('.dark-bg').css({
       display: 'inline-block',
     });
 
@@ -88,11 +70,11 @@ $(function () {
 
     // 메인 페이지와 세부 페이지에 따른 nav 위치가 달라 조건 분기
     if ($('nav').hasClass('detail-page-menu')) {
-      $('nav').stop().animate({
+      $('nav').stop(true).animate({
         right: '-30px',
       });
     } else {
-      $('nav').stop().animate({
+      $('nav').stop(true).animate({
         right: '0',
       });
     }
@@ -141,15 +123,14 @@ $(function () {
 
   // scroll top button
 
-  var $window = $(window),
-    $btnTop = $('.top');
+  var $btnTop = $('.top');
 
   $btnTop.on('click', function () {
-    $('html').animate(
+    $('html, body').animate(
       {
         scrollTop: 0,
       },
-      500
+      300
     );
   });
 });

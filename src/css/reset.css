@@ -85,10 +85,6 @@ cite {
     font-style: normal;
 }
 
-button:focus {
-    outline: none;
-}
-
 caption,
 figcaption,
 .blind {
@@ -108,8 +104,4 @@ figcaption,
 
 .hidden {
     display: none;
-}
-
-button:focus {
-    outline: none;
 }
